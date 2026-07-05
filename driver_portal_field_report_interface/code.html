@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jhalana Wilds | Field Report Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#52452e",
+                        "surface-dim": "#d9dadb",
+                        "primary-fixed-dim": "#95d3ba",
+                        "primary": "#003527",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#d7c4a6",
+                        "tertiary-container": "#6a3700",
+                        "surface-bright": "#f8f9fa",
+                        "background": "#f8f9fa",
+                        "on-primary-fixed": "#002117",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed": "#241a07",
+                        "on-surface": "#191c1d",
+                        "deep-forest": "#064E3B",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "tertiary-fixed": "#ffdcc3",
+                        "secondary-container": "#f1ddbe",
+                        "off-white": "#F9FAFB",
+                        "outline-variant": "#bfc9c3",
+                        "primary-fixed": "#b0f0d6",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#f3e0c1",
+                        "aravali-sand": "#E7D4B5",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#95d3ba",
+                        "sunset-amber": "#D97706",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-primary-container": "#80bea6",
+                        "on-background": "#191c1d",
+                        "leopard-gold": "#FFE9BF",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "surface-variant": "#e1e3e4",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "ink-black": "#1A1C1E",
+                        "error": "#ba1a1a",
+                        "primary-container": "#064e3b",
+                        "surface-tint": "#2b6954",
+                        "outline": "#707974",
+                        "on-tertiary-container": "#ff9939",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-container": "#edeeef",
+                        "on-surface-variant": "#404944",
+                        "on-secondary-container": "#6f6148",
+                        "tertiary": "#4a2400",
+                        "secondary": "#6a5d44"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter-desktop": "32px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "component-gap": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "stats-number": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "label-bold": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-ring {
+            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.4);
+        }
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .animate-pulse-soft {
+            animation: pulse-soft 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen pb-24">
+<!-- Top Navigation Bar (Mobile Optimized Header) -->
+<header class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 px-margin-mobile py-4 flex justify-between items-center shadow-sm">
+<div class="flex items-center gap-3">
+<img alt="Jhalana Wilds Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuEgier9eZKnITgsPNlpevd2fXjKQ4HeIIbNQR0AJ_Z_C2buRPhPVP_OXg3EHHW9plNOVAHLr9UJjTxbkt1YSitux0H_qP_CeKLAdfMFqneP6OSGXPBtUZg1bKmkBLUhukGfBfACaW33bTDtznXswGfw9O-yJ0-csUsSRj7oObTyfViFGmIjryngPERbhsVphBEOQ13-_5aRPwB35kuSgKqNHJ3d6GLMOPRPsEPemMkANivrbFu6fo-Lcw"/>
+<h1 class="font-headline-sm text-headline-sm text-deep-forest">Field Report</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-2 w-2 rounded-full bg-sunset-amber animate-pulse-soft"></div>
+<span class="font-label-bold text-label-bold text-on-surface-variant">SYNCED</span>
+</div>
+</header>
+<main class="px-margin-mobile pt-6 space-y-component-gap">
+<!-- Active Alerts Section -->
+<section>
+<div class="flex items-center justify-between mb-3">
+<h2 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-wider">Current Active Alerts</h2>
+<span class="font-label-bold text-label-bold text-sunset-amber">3 NEW</span>
+</div>
+<div class="space-y-3">
+<!-- Alert Card -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-sunset-amber flex items-center justify-between">
+<div class="flex gap-4">
+<div class="bg-aravali-sand/30 p-2 rounded-lg h-fit">
+<span class="material-symbols-outlined text-deep-forest" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-deep-forest font-bold">Flora (Female)</p>
+<p class="text-on-surface-variant text-label-bold font-label-bold">Zone 1 - High Point</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-bold text-label-bold text-on-surface-variant">09:42 AM</p>
+<p class="text-xs text-sunset-amber font-bold">STATIONARY</p>
+</div>
+</div>
+<!-- Alert Card -->
+<div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-outline-variant flex items-center justify-between">
+<div class="flex gap-4">
+<div class="bg-surface-container p-2 rounded-lg h-fit">
+<span class="material-symbols-outlined text-on-surface-variant">visibility</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-deep-forest">Machli III</p>
+<p class="text-on-surface-variant text-label-bold font-label-bold">Zone 3 - Watering Hole</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-bold text-label-bold text-on-surface-variant">09:15 AM</p>
+<p class="text-xs text-on-surface-variant">MOVING SOUTH</p>
+</div>
+</div>
+</div>
+</section>
+<!-- New Sighting Form -->
+<section class="bg-white rounded-2xl p-6 shadow-sm border border-surface-variant">
+<h2 class="font-headline-sm text-headline-sm text-deep-forest mb-6">Report New Sighting</h2>
+<form class="space-y-6" id="sighting-form">
+<!-- Selection: Leopard -->
+<div class="space-y-3">
+<label class="font-label-bold text-label-bold text-on-surface-variant block">SELECT LEOPARD</label>
+<div class="grid grid-cols-2 gap-3">
+<button class="leopard-btn border-2 border-surface-container p-4 rounded-xl flex flex-col items-center gap-2 transition-all active:scale-95" data-value="Flora" type="button">
+<span class="material-symbols-outlined text-3xl">female</span>
+<span class="font-label-bold text-label-bold">Flora</span>
+</button>
+<button class="leopard-btn border-2 border-surface-container p-4 rounded-xl flex flex-col items-center gap-2 transition-all active:scale-95" data-value="Rana" type="button">
+<span class="material-symbols-outlined text-3xl">male</span>
+<span class="font-label-bold text-label-bold">Rana</span>
+</button>
+<button class="leopard-btn border-2 border-surface-container p-4 rounded-xl flex flex-col items-center gap-2 transition-all active:scale-95" data-value="Nagin" type="button">
+<span class="material-symbols-outlined text-3xl">shield</span>
+<span class="font-label-bold text-label-bold">Nagin</span>
+</button>
+<button class="leopard-btn border-2 border-surface-container p-4 rounded-xl flex flex-col items-center gap-2 transition-all active:scale-95" data-value="Unknown" type="button">
+<span class="material-symbols-outlined text-3xl">help</span>
+<span class="font-label-bold text-label-bold">Unknown</span>
+</button>
+</div>
+</div>
+<!-- Selection: Zone -->
+<div class="space-y-3">
+<label class="font-label-bold text-label-bold text-on-surface-variant block">SELECT ZONE</label>
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-2 px-2 snap-x">
+<button class="zone-btn snap-start min-w-[80px] border-2 border-surface-container py-3 px-4 rounded-xl font-label-bold text-label-bold transition-all whitespace-nowrap" data-value="Zone 1" type="button">Zone 1</button>
+<button class="zone-btn snap-start min-w-[80px] border-2 border-surface-container py-3 px-4 rounded-xl font-label-bold text-label-bold transition-all whitespace-nowrap" data-value="Zone 2" type="button">Zone 2</button>
+<button class="zone-btn snap-start min-w-[80px] border-2 border-surface-container py-3 px-4 rounded-xl font-label-bold text-label-bold transition-all whitespace-nowrap" data-value="Zone 3" type="button">Zone 3</button>
+<button class="zone-btn snap-start min-w-[80px] border-2 border-surface-container py-3 px-4 rounded-xl font-label-bold text-label-bold transition-all whitespace-nowrap" data-value="Buffer" type="button">Buffer</button>
+</div>
+</div>
+<!-- Add Note -->
+<div class="space-y-3">
+<label class="font-label-bold text-label-bold text-on-surface-variant block">QUICK NOTES</label>
+<div class="flex flex-wrap gap-2 mb-3">
+<button class="note-chip bg-surface-container-low px-4 py-2 rounded-full text-sm font-medium border border-transparent" data-value="Hunt in progress" type="button">Hunt in progress</button>
+<button class="note-chip bg-surface-container-low px-4 py-2 rounded-full text-sm font-medium border border-transparent" data-value="Sleeping" type="button">Sleeping</button>
+<button class="note-chip bg-surface-container-low px-4 py-2 rounded-full text-sm font-medium border border-transparent" data-value="With cubs" type="button">With cubs</button>
+</div>
+<textarea class="w-full bg-off-white border-deep-forest/20 rounded-xl p-4 focus:ring-2 focus:ring-aravali-sand focus:border-deep-forest text-body-md" placeholder="Additional details (optional)..." rows="3"></textarea>
+</div>
+<!-- Submit Action -->
+<button class="w-full bg-deep-forest text-off-white py-5 rounded-xl font-label-bold text-lg uppercase tracking-widest shadow-lg flex items-center justify-center gap-3 transition-transform active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                    Submit Sighting Report
+                </button>
+</form>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Fixed Bottom) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-margin-mobile py-2 md:hidden bg-surface-container-low shadow-[0_-4px_12px_rgba(6,78,59,0.08)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-aravali-sand text-deep-forest rounded-xl px-4 py-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">radar</span>
+<span class="font-label-bold text-label-bold">Live Tracker</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant/50 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-bold text-label-bold">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant/50 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-label-bold text-label-bold">Roster</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:bg-surface-variant/50 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-label-bold text-label-bold">Base</span>
+</a>
+</nav>
+<script>
+        // Form Interactivity
+        const leopardBtns = document.querySelectorAll('.leopard-btn');
+        const zoneBtns = document.querySelectorAll('.zone-btn');
+        const noteChips = document.querySelectorAll('.note-chip');
+        const sightingForm = document.getElementById('sighting-form');
+
+        const setupToggle = (elements, activeClass, inactiveBorder) => {
+            elements.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    elements.forEach(b => {
+                        b.classList.remove(activeClass, 'bg-aravali-sand/20', 'border-sunset-amber', 'active-ring');
+                        b.classList.add(inactiveBorder);
+                    });
+                    btn.classList.add(activeClass, 'bg-aravali-sand/20', 'border-sunset-amber', 'active-ring');
+                    btn.classList.remove(inactiveBorder);
+                });
+            });
+        };
+
+        setupToggle(leopardBtns, 'selected-leopard', 'border-surface-container');
+        setupToggle(zoneBtns, 'selected-zone', 'border-surface-container');
+
+        noteChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chip.classList.toggle('bg-sunset-amber');
+                chip.classList.toggle('text-white');
+                chip.classList.toggle('bg-surface-container-low');
+            });
+        });
+
+        sightingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = sightingForm.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Submitting...';
+            btn.classList.add('opacity-80', 'pointer-events-none');
+
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Report Sent';
+                btn.classList.replace('bg-deep-forest', 'bg-green-700');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.replace('bg-green-700', 'bg-deep-forest');
+                    btn.classList.remove('opacity-80', 'pointer-events-none');
+                    sightingForm.reset();
+                    document.querySelectorAll('.active-ring').forEach(el => el.classList.remove('active-ring', 'bg-aravali-sand/20', 'border-sunset-amber'));
+                    document.querySelectorAll('.note-chip.bg-sunset-amber').forEach(el => el.click());
+                }, 2000);
+            }, 1200);
+        });
+
+        // Add haptic-like vibration on mobile if available
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (window.navigator.vibrate) {
+                    window.navigator.vibrate(10);
+                }
+            });
+        });
+    </script>
+</body></html>

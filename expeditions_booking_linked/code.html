@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jhalana Wilds | Premium Safari Bookings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:wght@700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .safari-grid-pattern {
+            background-image: radial-gradient(#064E3B 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .leopard-glow {
+            box-shadow: 0 10px 30px rgba(6, 78, 59, 0.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "ink-black": "#1A1C1E",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-error-container": "#93000a",
+                      "outline": "#707974",
+                      "on-tertiary-fixed-variant": "#6e3900",
+                      "tertiary": "#4a2400",
+                      "on-secondary-fixed-variant": "#52452e",
+                      "on-primary-container": "#80bea6",
+                      "aravali-sand": "#E7D4B5",
+                      "background": "#f8f9fa",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#191c1d",
+                      "outline-variant": "#bfc9c3",
+                      "secondary-fixed": "#f3e0c1",
+                      "surface-tint": "#2b6954",
+                      "on-secondary-fixed": "#241a07",
+                      "inverse-primary": "#95d3ba",
+                      "on-secondary-container": "#6f6148",
+                      "on-surface-variant": "#404944",
+                      "tertiary-container": "#6a3700",
+                      "on-primary-fixed": "#002117",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb77d",
+                      "surface-variant": "#e1e3e4",
+                      "on-tertiary-container": "#ff9939",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f8f9fa",
+                      "on-primary-fixed-variant": "#0b513d",
+                      "inverse-on-surface": "#f0f1f2",
+                      "primary-fixed-dim": "#95d3ba",
+                      "deep-forest": "#064E3B",
+                      "on-error": "#ffffff",
+                      "off-white": "#F9FAFB",
+                      "error-container": "#ffdad6",
+                      "leopard-gold": "#FFE9BF",
+                      "surface-dim": "#d9dadb",
+                      "surface-container-low": "#f3f4f5",
+                      "secondary-container": "#f1ddbe",
+                      "secondary-fixed-dim": "#d7c4a6",
+                      "tertiary-fixed": "#ffdcc3",
+                      "surface": "#f8f9fa",
+                      "inverse-surface": "#2e3132",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#003527",
+                      "sunset-amber": "#D97706",
+                      "surface-container-high": "#e7e8e9",
+                      "secondary": "#6a5d44",
+                      "on-primary": "#ffffff",
+                      "on-background": "#191c1d",
+                      "on-tertiary-fixed": "#2f1500",
+                      "primary-fixed": "#b0f0d6",
+                      "surface-container": "#edeeef",
+                      "primary-container": "#064e3b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "section-gap": "120px",
+                      "margin-mobile": "20px",
+                      "component-gap": "24px",
+                      "gutter-desktop": "32px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "stats-number": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-sm": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "display-lg-mobile": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-off-white text-ink-black font-body-md overflow-x-hidden selection:bg-aravali-sand">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 flex justify-between items-center px-margin-desktop py-4 w-full max-w-container-max mx-auto shadow-sm">
+<a class="font-headline-md text-headline-md font-bold text-deep-forest" href="index.html">Jhalana Wilds</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-deep-forest transition-colors" href="leopards.html">Leopards</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-deep-forest transition-colors" href="sightings.html">Zones</a>
+<a class="font-label-bold text-label-bold text-sunset-amber border-b-2 border-sunset-amber pb-1" href="booking.html">Packages</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-deep-forest transition-colors" href="policies.html">Ethical Safari</a>
+</div>
+<a class="bg-deep-forest text-off-white px-6 py-2 rounded font-label-bold text-label-bold hover:bg-primary transition-all active:scale-95 shadow-lg inline-block" href="booking.html">Check Availability</a>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-deep-forest/40 z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A breathtaking cinematic wide shot of a wild leopard resting majestically on a rugged pink sandstone ridge in the Jhalana forest during the golden hour. The sky is a gradient of deep amber and soft violet, illuminating the arid landscape of acacia trees and rocky terrain. The visual style is premium editorial photography with high contrast and deep forest emerald shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgwY_ojLR5aZ7_GvsEnx468_lvuxKihXNHY0GpQGaobsJHzBe-4x6QLBe6SqW6q8tMN8UdtTc268X6npmPhZLsBwl_LBYjzhwjUu0OFwF_BXxyW6kXkM-phdxIFmbduMaDmqWgCMnU3KO7A2xFjzKt32AsUtLz9MD-7YhOPqyFiRZagMu4yVg915WO0rNsacwkWO0E96RBXcsTsqutmSe5z0I9k7TW8E6LMeYxhflYKHBl_Z-JhxlsRl9I23p0gGHJKDf54yRxGHs')"></div>
+<div class="relative z-20 text-center px-margin-mobile">
+<h1 class="font-display-lg text-display-lg text-off-white mb-4">The Wildest Encounter</h1>
+<p class="font-body-lg text-body-lg text-leopard-gold max-w-2xl mx-auto">Select your specialized expedition into the heart of Rajasthan's leopard country.</p>
+</div>
+</section>
+<!-- Packages Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-component-gap items-stretch">
+<!-- Standard Shared Jeep -->
+<div class="flex-1 flex flex-col bg-surface-container border border-outline-variant/30 rounded-xl overflow-hidden leopard-glow">
+<div class="p-8 flex-1">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="font-label-bold text-label-bold text-deep-forest uppercase tracking-widest">Entry Level</span>
+<h3 class="font-headline-md text-headline-md mt-2 text-primary">Standard Shared Jeep</h3>
+</div>
+<div class="text-right">
+<p class="text-deep-forest font-stats-number text-stats-number">₹4,200</p>
+<p class="font-label-bold text-label-bold text-on-surface-variant">per person</p>
+</div>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-sunset-amber">groups</span> Shared seating (up to 6 guests)
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-sunset-amber">forest</span> Zone assigned by lottery
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-sunset-amber">verified</span> Certified Forest Guide
+                        </li>
+</ul>
+</div>
+<div class="p-8 bg-surface-container-highest border-t border-outline-variant/20">
+<button class="w-full bg-aravali-sand text-deep-forest py-4 rounded-lg font-label-bold text-label-bold hover:bg-secondary-container transition-all">Select Shared Tour</button>
+</div>
+</div>
+<!-- Premium Private Gypsy -->
+<div class="flex-1 flex flex-col bg-deep-forest text-off-white border-2 border-sunset-amber rounded-xl overflow-hidden leopard-glow relative transform md:scale-105 z-10">
+<div class="absolute top-4 left-4 w-12 h-12 bg-white rounded-full p-1 shadow-md z-20"><img alt="Ethical Safari Badge" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuVtlG4dzI-_r7riJKRwBep_edk8512m7qbkiUuEo28YRHVM_u2X03xxaGFidGJ8p3o8gfIP2BhfjXyXtkstec5MpsA31qKEzuTKQsX7Cg1lJ2m93nXSkLfJD3q38hIOShaVQJkAdKeFkGcPmYavNcP7GceNmZKqg12C3q06UN6J4xIYZkpR5i-rpwzLiYqGg0B_OW8gph7DjuhZy3us1k8cOfcSB0A9qy5bEW3UOmpy5UjW28joS6wxp4"/></div><div class="absolute top-4 right-4 bg-sunset-amber text-ink-black px-3 py-1 rounded-full font-label-bold text-[10px] uppercase tracking-tighter">Recommended</div>
+<div class="p-8 flex-1">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="font-label-bold text-label-bold text-leopard-gold uppercase tracking-widest">Exclusive Luxury</span>
+<h3 class="font-headline-md text-headline-md mt-2 text-off-white">Premium Private Gypsy</h3>
+</div>
+<div class="text-right">
+<p class="text-leopard-gold font-stats-number text-stats-number">₹14,500</p>
+<p class="font-label-bold text-label-bold text-primary-fixed-dim">per vehicle (1-6 pax)</p>
+</div>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-leopard-gold">star</span> Full vehicle exclusivity
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-leopard-gold">map</span> Preferred Zone selection (Subject to availability)
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-leopard-gold">photo_camera</span> Dedicated naturalist for photography
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-body-md">
+<span class="material-symbols-outlined text-leopard-gold">local_cafe</span> Gourmet breakfast/evening hamper
+                        </li>
+</ul>
+</div>
+<div class="p-8 bg-primary/50 border-t border-primary-container">
+<button class="w-full bg-sunset-amber text-ink-black py-4 rounded-lg font-label-bold text-label-bold hover:bg-leopard-gold transition-all">Book Private Expedition</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Zone Selection Section -->
+<section class="bg-surface-container-low py-section-gap px-margin-desktop overflow-hidden relative">
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="mb-16">
+<span class="font-label-bold text-label-bold text-sunset-amber">THE RESERVE ECOSYSTEM</span>
+<h2 class="font-display-lg text-display-lg mt-4 text-deep-forest">Choose Your Zone</h2>
+<p class="font-body-lg text-body-lg mt-4 text-on-surface-variant max-w-2xl">Each territory within the Jhalana Wilds ecosystem offers a unique landscape and sighting potential based on season and leopard density.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-component-gap">
+<!-- Zone 1: Jhalana -->
+<div class="group cursor-pointer">
+<div class="relative h-96 overflow-hidden rounded-xl mb-6">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A detailed terrain map of Jhalana Zone featuring rocky hills and dry deciduous forest topography. The map is designed in a luxury vintage aesthetic with deep emerald forest tones and aravali sand accents. The visual includes subtle sightings icons and elevation markers, looking like a professional naturalist's fieldwork diary page." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzVxZuo9BlAASyvAo-vNtAxaJ9v5AHCXD5nUwlYRlZSFN_RizJaBlap3eKVIOSf9zdBkgMCvbbo64MeMh-Oy2P3kIeTpyfvEZhdp1xvBvG--AltZpjU4Ds4YtHb7Cdkv6VoVVv6kEU73iOV4ccMYJAzzbZreBQURS2WmOrtD7C5DbMydsq0jgZEaEsRMc0jbx3NSsqPihNMDqKLMHg80nLuT3VXTJWev5NtRYT63nQpDkfUyNhrq3v5LcGiI-Mn4OjS3p1k5v4ijw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-forest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-off-white">
+<h4 class="font-headline-sm text-headline-sm">Jhalana Proper</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-sunset-amber text-sm" style="font-variation-settings: 'FILL' 1;">pause</span>
+<span class="font-label-bold text-label-bold text-xs uppercase">85% Sighting Prob.</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<p class="font-label-bold text-label-bold text-deep-forest">Landscape: Rocky Hills &amp; Caves</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Primary territory for dominant males like 'Prince'. Famous for its spectacular sandstone outcrops.</p>
+</div>
+</div>
+<!-- Zone 2: Amagarh -->
+<div class="group cursor-pointer">
+<div class="relative h-96 overflow-hidden rounded-xl mb-6">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A topographical map showing the high ridges and deep valleys of the Amagarh leopard reserve. The styling is a corporate modern data visualization, using subtle greens and warm beige tones. The map highlights the high leopard density areas with translucent glowing overlays and elegant serif typography labels." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAK3cR16cEj-SEqmV0hPcljbKz3yURoXJz0shrKrIj2rWaW99B_jPsMngs1RjeiBwtAH-AtRq_wGCY0nnrqhgavRXgft1iuDugnfsjXBTA7ixwhC6gps-yRaOtgrHWbeU4Hpk-5dCQFhSPfHAHCr4eHtE5RqKBFz1dUx9AGy6Sd1JSoX6WKhm9QxRREcVsNRcBT-I1fsuO_lzwH1s4HuhGYiWEmWHkxkhvcC6BaPRG1AapCSPxLcVpeR1VK3MrrYf-h0N-uIUej7ko')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-forest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-off-white">
+<h4 class="font-headline-sm text-headline-sm">Amagarh Ridge</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-sunset-amber text-sm" style="font-variation-settings: 'FILL' 1;">pause</span>
+<span class="font-label-bold text-label-bold text-xs uppercase">70% Sighting Prob.</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<p class="font-label-bold text-label-bold text-deep-forest">Landscape: High Ridges &amp; Vistas</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Challenging terrain with rewarding views of the Jaipur skyline. Home to the elusive 'Juliet' lineage.</p>
+</div>
+</div>
+<!-- Zone 3: Beed Papad -->
+<div class="group cursor-pointer">
+<div class="relative h-96 overflow-hidden rounded-xl mb-6">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A luxury illustrative map of the Beed Papad zone, focusing on its dense flora and diverse birdlife. The aesthetic combines hand-drawn botanical elements with modern UI precision. Colors are rich forest emerald and soft ivory, depicting a lush green landscape with waterhole markers and bird watching spots." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB97_CRmy4FfYqLQ0DugRN0jldSG55vj_fANqHShNNO4VfGQ7Swv6J808KdzPa-AeOSF6QMfSvfISlpMiVoPs0hdpCriWQmWYzAj0dUaYH6gkwMTziJOaMg29n5Y_a5HbtKMGswL_qi1elVkVkNgSH69g2UGJa9O6x4OItp3slbodEyJkX-8DYswRjkfa9VyZ_9olD3Eky-OJajYR6L3WfE-gapWJ4Bm4uR1o3Yg7CclJTro1HWpR-SsvPbtHWYi4rNiWzY8ft3RDs')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-forest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 text-off-white">
+<h4 class="font-headline-sm text-headline-sm">Beed Papad</h4>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-sunset-amber text-sm" style="font-variation-settings: 'FILL' 1;">pause</span>
+<span class="font-label-bold text-label-bold text-xs uppercase">60% Sighting Prob.</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<p class="font-label-bold text-label-bold text-deep-forest">Landscape: Dense Flora &amp; Valleys</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Lush greenery and high biodiversity. Preferred for morning birding and leopard cub sightings.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-96 h-96 opacity-5 safari-grid-pattern"></div>
+</section>
+<!-- Photography Tour Inquiry -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-deep-forest rounded-xl overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+<div class="lg:w-1/2 p-12 lg:p-20 text-off-white flex flex-col justify-center">
+<span class="font-label-bold text-label-bold text-leopard-gold uppercase tracking-widest mb-6 block">Masterclass Expeditions</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Photography-Specific Tracking</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-10">Capture the apex predator through the lens of a professional. Our specialized photography tours feature extra tracking time, prime positioning, and expert guidance on lighting and camera settings.</p>
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-3 bg-[#25D366] text-ink-black px-6 py-4 rounded-lg font-label-bold text-label-bold hover:scale-105 transition-all" href="https://wa.me/yournumber">
+<span class="material-symbols-outlined">chat</span> WhatsApp Concierge
+                    </a>
+<span class="font-label-bold text-label-bold text-leopard-gold">Available 24/7</span>
+</div>
+</div>
+<div class="lg:w-1/2 bg-surface-container-lowest p-12 lg:p-20">
+<form class="space-y-6">
+<div>
+<label class="block font-label-bold text-label-bold text-deep-forest mb-2">FULL NAME</label>
+<input class="w-full border-deep-forest/20 focus:border-sunset-amber focus:ring-sunset-amber rounded-none p-4 font-body-md" placeholder="e.g., Alexander Graham" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-bold text-label-bold text-deep-forest mb-2">EMAIL ADDRESS</label>
+<input class="w-full border-deep-forest/20 focus:border-sunset-amber focus:ring-sunset-amber rounded-none p-4 font-body-md" placeholder="alexander@luxury.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-deep-forest mb-2">PHONE NUMBER</label>
+<input class="w-full border-deep-forest/20 focus:border-sunset-amber focus:ring-sunset-amber rounded-none p-4 font-body-md" placeholder="+91 00000 00000" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-deep-forest mb-2">INTEREST AREA</label>
+<select class="w-full border-deep-forest/20 focus:border-sunset-amber focus:ring-sunset-amber rounded-none p-4 font-body-md bg-transparent">
+<option>Photography Masterclass</option>
+<option>Private Family Tour</option>
+<option>Corporate Retreat</option>
+<option>Research Collaboration</option>
+</select>
+</div>
+<button class="w-full bg-deep-forest text-off-white py-5 rounded font-label-bold text-label-bold hover:bg-primary transition-all shadow-lg" type="submit">Request Bespoke Quote</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-deep-forest w-full py-section-gap px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-component-gap">
+<div class="max-w-sm">
+<a class="font-headline-sm text-headline-sm text-leopard-gold mb-6 block" href="index.html">Jhalana Wilds</a>
+<p class="text-primary-fixed-dim font-body-md text-body-md mb-8">Crafting exclusive wilderness experiences with a commitment to sustainable tourism and predator conservation.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-leopard-gold p-2 bg-primary rounded-full cursor-pointer hover:bg-sunset-amber transition-colors">public</span>
+<span class="material-symbols-outlined text-leopard-gold p-2 bg-primary rounded-full cursor-pointer hover:bg-sunset-amber transition-colors">camera_alt</span>
+<span class="material-symbols-outlined text-leopard-gold p-2 bg-primary rounded-full cursor-pointer hover:bg-sunset-amber transition-colors">alternate_email</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-x-20 gap-y-12">
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-label-bold text-off-white/40 uppercase">Expedition</span>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="sightings.html">Zone Map</a>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="sustainability.html">Sustainability Pledge</a>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="leopards.html">Leopard Census</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-label-bold text-off-white/40 uppercase">Legal</span>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="policies.html">Terms of Service</a>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="policies.html">Privacy Policy</a>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="policies.html">Booking Policy</a>
+</div>
+</div>
+<div class="w-full mt-20 pt-8 border-t border-primary-container text-primary-fixed-dim font-body-md text-center md:text-left">
+            © 2024 Jhalana Wilds. All rights reserved. Registered Citizen Scientist Partner.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-margin-mobile py-2 md:hidden bg-surface-container-low shadow-[0_-4px_12px_rgba(6,78,59,0.08)] z-50 rounded-t-xl">
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-label-bold">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2">
+<span class="material-symbols-outlined">radar</span>
+<span class="text-[10px] font-label-bold">Live Tracker</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-aravali-sand text-deep-forest rounded-xl px-4 py-2">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-[10px] font-label-bold">My Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="text-[10px] font-label-bold">Support</span>
+</div>
+</nav>
+<script>
+        // Micro-interactions for zone cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Sticky Navbar subtle shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body></html>

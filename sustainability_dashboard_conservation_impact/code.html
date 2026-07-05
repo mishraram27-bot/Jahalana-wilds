@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Preserving the Aravalli Legacy | Jhalana Wilds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#f0f1f2",
+                      "secondary": "#6a5d44",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#f8f9fa",
+                      "primary": "#003527",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-container": "#edeeef",
+                      "ink-black": "#1A1C1E",
+                      "surface-container-high": "#e7e8e9",
+                      "leopard-gold": "#FFE9BF",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#95d3ba",
+                      "surface": "#f8f9fa",
+                      "deep-forest": "#064E3B",
+                      "tertiary-fixed": "#ffdcc3",
+                      "on-primary-fixed-variant": "#0b513d",
+                      "tertiary-container": "#6a3700",
+                      "primary-fixed": "#b0f0d6",
+                      "secondary-container": "#f1ddbe",
+                      "on-secondary-fixed-variant": "#52452e",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed": "#002117",
+                      "secondary-fixed": "#f3e0c1",
+                      "on-background": "#191c1d",
+                      "background": "#f8f9fa",
+                      "off-white": "#F9FAFB",
+                      "tertiary": "#4a2400",
+                      "inverse-surface": "#2e3132",
+                      "on-tertiary-container": "#ff9939",
+                      "sunset-amber": "#D97706",
+                      "surface-tint": "#2b6954",
+                      "on-tertiary-fixed": "#2f1500",
+                      "outline-variant": "#bfc9c3",
+                      "on-primary-container": "#80bea6",
+                      "surface-container-low": "#f3f4f5",
+                      "inverse-primary": "#95d3ba",
+                      "aravali-sand": "#E7D4B5",
+                      "on-secondary-fixed": "#241a07",
+                      "outline": "#707974",
+                      "secondary-fixed-dim": "#d7c4a6",
+                      "on-surface-variant": "#404944",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#6f6148",
+                      "on-tertiary-fixed-variant": "#6e3900",
+                      "surface-dim": "#d9dadb",
+                      "tertiary-fixed-dim": "#ffb77d",
+                      "primary-container": "#064e3b",
+                      "surface-variant": "#e1e3e4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#191c1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "gutter-desktop": "32px",
+                      "component-gap": "24px",
+                      "container-max": "1280px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Playfair Display"],
+                      "display-lg": ["Playfair Display"],
+                      "stats-number": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "headline-md": ["Playfair Display"],
+                      "display-lg-mobile": ["Playfair Display"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .leopard-gradient {
+            background: linear-gradient(135deg, #064E3B 0%, #003527 100%);
+        }
+        .chart-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s ease-out forwards;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+      </style>
+</head>
+<body class="bg-off-white font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="w-full top-0 sticky z-[100] bg-surface/90 backdrop-blur-md shadow-[0_10px_30px_rgba(6,78,59,0.05)]">
+<nav class="hidden md:flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Jhalana Wilds</div>
+<div class="flex space-x-gutter-desktop items-center">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Leopards</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Zones</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Packages</a>
+<a class="font-label-bold text-label-bold text-primary border-b-2 border-primary pb-1" href="#">Ethical Safari</a>
+<button class="bg-deep-forest text-off-white px-6 py-2 rounded-sm font-label-bold text-label-bold hover:opacity-90 transition-all active:scale-95">Check Availability</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Hero Section -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<span class="font-label-bold text-label-bold text-sunset-amber tracking-widest uppercase mb-4 block">Sustainability Report 2024</span>
+<h1 class="font-display-lg text-display-lg text-deep-forest mb-6">Preserving the Aravalli Legacy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Beyond the thrill of the safari lies a commitment to the wild. Jhalana Wilds operates at the intersection of luxury and legacy, ensuring every sighting contributes to a future where leopards and local communities thrive in harmony.
+                    </p>
+<div class="flex items-center gap-6">
+<img alt="Ethical Safari Badge" class="w-24 h-24" src="https://lh3.googleusercontent.com/aida/AP1WRLuVtlG4dzI-_r7riJKRwBep_edk8512m7qbkiUuEo28YRHVM_u2X03xxaGFidGJ8p3o8gfIP2BhfjXyXtkstec5MpsA31qKEzuTKQsX7Cg1lJ2m93nXSkLfJD3q38hIOShaVQJkAdKeFkGcPmYavNcP7GceNmZKqg12C3q06UN6J4xIYZkpR5i-rpwzLiYqGg0B_OW8gph7DjuhZy3us1k8cOfcSB0A9qy5bEW3UOmpy5UjW28joS6wxp4"/>
+<div>
+<p class="font-label-bold text-label-bold text-deep-forest">Certified Gold Standard</p>
+<p class="text-sm text-outline">Ethical Viewing &amp; Low-Impact Travel</p>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] rounded-sm overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A cinematic, high-resolution portrait of a majestic leopard resting on a granite rock in the Aravalli hills. The lighting is the golden hour of sunset, casting a warm amber glow over its spotted fur. The background features the rugged, arid landscape of Jhalana forest with soft focus. The aesthetic is luxurious, editorial, and captures the raw essence of wilderness conservation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDPkabXEvWGcmr68a1-6vi1IyIizd9YFzB-45WxVq2v6mlPQwuUTZ7Hbg2wu46uyc0AAA-sAO18bYczpWLfF6dY4Uiy1oC7a7FvdGhEXvvly8PwEvfxqdgk95xfLPLzqyxB_Lwi6_Vo36cXiZ7uj-3i2d4xth2-Ujuc_hEezgNGnlVCg9SKgspASpy14UW6qrkMOfJ33kOj7ZKnktlo37tkRKZXA4cjjYiZqfUqwAO9nZgUWmbYCBZIltDAVJZfr6g5hcs-CohthDU')"></div>
+<div class="absolute bottom-6 left-6 glass-panel p-4 rounded-sm flex items-center gap-3">
+<span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sunset-amber opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-sunset-amber"></span>
+</span>
+<span class="font-label-bold text-label-bold text-primary">LIVE SIGHTING: ZONE 1 • 14:20</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Conservation Metrics -->
+<section class="mb-section-gap">
+<h2 class="font-headline-md text-headline-md text-deep-forest mb-12 flex items-center gap-4">
+<span class="w-12 h-[1px] bg-aravali-sand"></span>
+                Conservation Metrics
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
+<!-- Leopard Population Chart -->
+<div class="md:col-span-8 bg-surface border border-outline-variant p-8 rounded-sm shadow-[0_10px_30px_rgba(6,78,59,0.02)]">
+<div class="flex justify-between items-start mb-10">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Leopard Population Growth</h3>
+<p class="text-on-surface-variant font-body-md">Sustained species recovery in the Jhalana region.</p>
+</div>
+<div class="text-right">
+<span class="font-stats-number text-display-lg text-deep-forest">+42%</span>
+<p class="font-label-bold text-label-bold text-sunset-amber">SINCE 2018</p>
+</div>
+</div>
+<div class="w-full h-64 relative">
+<!-- Custom SVG Chart -->
+<svg class="w-full h-full overflow-visible" viewbox="0 0 800 200">
+<path class="chart-line" d="M0,180 Q100,160 200,150 T400,100 T600,60 T800,20" fill="none" stroke="#064E3B" stroke-width="4"></path>
+<path d="M0,180 Q100,160 200,150 T400,100 T600,60 T800,20 L800,200 L0,200 Z" fill="url(#grad1)" opacity="0.1"></path>
+<defs>
+<lineargradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#064E3B;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#064E3B;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<circle cx="800" cy="20" fill="#D97706" r="6"></circle>
+</svg>
+<div class="flex justify-between mt-4 text-outline font-label-bold text-xs uppercase tracking-tighter">
+<span>2018</span><span>2020</span><span>2022</span><span>Present Day</span>
+</div>
+</div>
+</div>
+<!-- Anti-Poaching Counter -->
+<div class="md:col-span-4 flex flex-col gap-gutter-desktop">
+<div class="bg-deep-forest p-8 rounded-sm text-off-white flex-1 flex flex-col justify-center">
+<span class="material-symbols-outlined text-4xl mb-4 text-aravali-sand">security</span>
+<h4 class="font-label-bold text-label-bold uppercase opacity-80 mb-2">Anti-Poaching Patrols</h4>
+<div class="font-stats-number text-5xl mb-2">2,840</div>
+<p class="text-sm opacity-70">Kilometers patrolled monthly by our dedicated forest guardians.</p>
+</div>
+<div class="bg-aravali-sand p-8 rounded-sm text-primary flex-1 flex flex-col justify-center">
+<span class="material-symbols-outlined text-4xl mb-4 text-deep-forest">nature_people</span>
+<h4 class="font-label-bold text-label-bold uppercase opacity-80 mb-2">Species Protected</h4>
+<div class="font-stats-number text-5xl mb-2">124</div>
+<p class="text-sm opacity-70">Unique fauna species documented and protected within the zone.</p>
+</div>
+</div>
+<!-- Map Section -->
+<div class="md:col-span-12 bg-surface p-8 border border-outline-variant rounded-sm">
+<div class="flex flex-col md:flex-row justify-between gap-8">
+<div class="md:w-1/3">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Protected Area Expansion</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Strategic reforestation and corridor management have added 1,200 hectares of vital habitat to the Aravalli ecosystem.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<div class="w-3 h-3 bg-deep-forest rounded-full"></div>
+<span class="font-label-bold text-sm">Core Leopard Zone</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-3 h-3 bg-aravali-sand rounded-full"></div>
+<span class="font-label-bold text-sm">Community Buffer Zone</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-3 h-3 bg-sunset-amber rounded-full"></div>
+<span class="font-label-bold text-sm">Active Reforestation</span>
+</li>
+</ul>
+</div>
+<div class="md:w-2/3 h-80 bg-surface-container rounded-sm overflow-hidden relative">
+<div class="absolute inset-0 opacity-40 grayscale" data-alt="A high-contrast topographic map of the Jhalana Leopard Reserve area in Jaipur, showing contour lines of the Aravalli hills. The map is styled with deep green and earthy tan tones, highlighting green forest patches and dusty desert peripheries. It looks like a high-end expedition map used by conservationists." data-location="Jaipur" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKs3j3zvUauu39P7nQyk5z-_plVKsH09fb4FMSUCka4MdKebeZZ811oqlUNrkKfxebjZMfT_3_-GNv3pyVEp2b5F0pKIv5kGYqDw5sI6pSc056gr16O9ClKE-LDYQLn5sTbomH-xFJdWLgOoUkJmmrKl5vJ91uFS1LPf0hKw7eQxPOAIvArkYu6eqJ9tpAOnqG3FY4BN86y5c0GIYma4vgiJ9SBgDtsl3J6IKD0lQW2REknko_BmWlwUQGMyXqM8GsHAL44qI5PBA')"></div>
+<!-- Simulated Data Overlays -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-48 h-48 bg-deep-forest/20 rounded-full border-2 border-deep-forest animate-pulse"></div>
+<div class="w-24 h-24 bg-sunset-amber/30 rounded-full border-2 border-sunset-amber absolute ml-32 -mt-20"></div>
+</div>
+<div class="absolute top-4 right-4 bg-white/80 p-2 text-[10px] font-label-bold rounded shadow-sm">
+                                SCALE: 1 : 25,000
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community & Tourism Bento -->
+<section class="mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Community Impact -->
+<div class="md:col-span-2 bg-white p-10 border border-outline-variant shadow-sm rounded-sm">
+<h2 class="font-headline-sm text-headline-sm text-deep-forest mb-8">Community Impact</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="space-y-2">
+<p class="font-label-bold text-xs text-outline uppercase">Local Employment</p>
+<p class="font-stats-number text-3xl text-primary">94%</p>
+<p class="text-sm text-on-surface-variant">Staff recruited from surrounding villages.</p>
+</div>
+<div class="space-y-2">
+<p class="font-label-bold text-xs text-outline uppercase">Education</p>
+<p class="font-stats-number text-3xl text-primary">12k+</p>
+<p class="text-sm text-on-surface-variant">Students reached through nature literacy.</p>
+</div>
+<div class="space-y-2">
+<p class="font-label-bold text-xs text-outline uppercase">Livelihoods</p>
+<p class="font-stats-number text-3xl text-primary">42</p>
+<p class="text-sm text-on-surface-variant">Local micro-enterprises supported.</p>
+</div>
+</div>
+<div class="mt-12 h-64 rounded-sm overflow-hidden bg-cover bg-center" data-alt="A warm and vibrant photograph showing a local Rajasthani woman in a colorful traditional dress teaching children about wildlife conservation in an open-air classroom. The setting is under a large Banyan tree with the sun filtering through the leaves. The mood is hopeful, authentic, and emphasizes the human aspect of wilderness legacy." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBx-5QoIfSfA8obomum3scdRLhVUJcc0LQ3GWaC6F53iaGn8MWsKi4jUuu4kcjMcyrjkt-AOpVghPnTtgDIuqqtnRc6T5S6CHyBm5gvd7bTikHvAu8ZmoERMWonXA045KJS8XK2S3oZIwjPTMzlylPetRa87uSBgJ8ynwt-4iTdSbktgihGJLTCq0WbftDhtz5vdFcJds4U9FEHkbPHroTvfnHZQfGrCAR3JJwGBE0K0nr8zdRZefqlq_mRMZI9Q_2_rcvE583PFB0')"></div>
+</div>
+<!-- Ethical Tourism Card -->
+<div class="md:col-span-1 bg-surface-container-low p-10 flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-deep-forest mb-8">Ethical Tourism</h2>
+<div class="space-y-8 flex-1">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-bold text-sm">Plastic-Free Certification</span>
+<span class="font-label-bold text-sm text-deep-forest">100%</span>
+</div>
+<div class="w-full bg-outline-variant h-2 rounded-full overflow-hidden">
+<div class="bg-deep-forest h-full w-[100%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-bold text-sm">Carbon-Neutral Goals</span>
+<span class="font-label-bold text-sm text-deep-forest">82%</span>
+</div>
+<div class="w-full bg-outline-variant h-2 rounded-full overflow-hidden">
+<div class="bg-deep-forest h-full w-[82%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-bold text-sm">Viewing Compliance</span>
+<span class="font-label-bold text-sm text-deep-forest">99.4%</span>
+</div>
+<div class="w-full bg-outline-variant h-2 rounded-full overflow-hidden">
+<div class="bg-deep-forest h-full w-[99%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-10 p-6 bg-white/50 border border-deep-forest/10 rounded-sm">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-sunset-amber">workspace_premium</span>
+<p class="font-label-bold text-xs text-primary uppercase">Current Protocol</p>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+                            Strict adhereance to the 20m observation radius and 15-minute dwell limit to ensure zero disturbance to feline behavior.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 text-center">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Invest in the Wild</h3>
+<p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant mb-10">
+                Join our Citizen Scientist program or contribute to the Habitat Expansion Fund. Every safari booked contributes directly to these metrics.
+            </p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="bg-deep-forest text-off-white px-10 py-4 rounded-sm font-label-bold tracking-widest uppercase hover:bg-primary transition-all">Support Conservation</button>
+<button class="bg-aravali-sand text-deep-forest px-10 py-4 rounded-sm font-label-bold tracking-widest uppercase hover:opacity-80 transition-all">View Sustainability Report</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-forest dark:bg-ink-black w-full mt-section-gap">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md text-aravali-sand font-bold mb-2">Jhalana Wilds</div>
+<p class="font-body-md text-body-md text-off-white/80 max-w-xs">Conservation First Safari. Protecting the Aravalli leopards since 2018.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-sunset-amber transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-sunset-amber transition-colors" href="#">Terms of Service</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-sunset-amber transition-colors" href="#">Sustainability Report</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-sunset-amber transition-colors" href="#">Community Impact</a>
+</div>
+<div class="text-off-white/60 font-label-bold text-xs text-center md:text-right">
+                © 2024 Jhalana Wilds. Conservation First Safari.
+            </div>
+</div>
+</footer>
+<!-- Bottom Nav for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-surface shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-[100] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-label-bold">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 scale-90" href="#">
+<span class="material-symbols-outlined">radar</span>
+<span class="text-[10px] font-label-bold">Tracker</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-[10px] font-label-bold">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="text-[10px] font-label-bold">Support</span>
+</a>
+</nav>
+<script>
+        // Simple intersection observer for chart animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const paths = entry.target.querySelectorAll('.chart-line');
+                    paths.forEach(path => {
+                        path.style.animation = 'dash 3s ease-out forwards';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        const charts = document.querySelectorAll('svg');
+        charts.forEach(chart => observer.observe(chart));
+    </script>
+</body></html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Masterclass Collection | Jhalana Wilds</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#191c1d",
+                    "inverse-primary": "#95d3ba",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#404944",
+                    "inverse-on-surface": "#f0f1f2",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#f3e0c1",
+                    "outline": "#707974",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#064e3b",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "inverse-surface": "#2e3132",
+                    "surface-tint": "#2b6954",
+                    "leopard-gold": "#FFE9BF",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-container": "#ff9939",
+                    "on-tertiary-fixed-variant": "#6e3900",
+                    "tertiary-fixed-dim": "#ffb77d",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1d",
+                    "secondary-container": "#f1ddbe",
+                    "deep-forest": "#064E3B",
+                    "surface-bright": "#f8f9fa",
+                    "off-white": "#F9FAFB",
+                    "secondary-fixed-dim": "#d7c4a6",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#6a3700",
+                    "sunset-amber": "#D97706",
+                    "primary-fixed-dim": "#95d3ba",
+                    "on-tertiary-fixed": "#2f1500",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e3e4",
+                    "surface-dim": "#d9dadb",
+                    "aravali-sand": "#E7D4B5",
+                    "outline-variant": "#bfc9c3",
+                    "surface-container-highest": "#e1e3e4",
+                    "primary-fixed": "#b0f0d6",
+                    "on-secondary-fixed": "#241a07",
+                    "on-primary-container": "#80bea6",
+                    "ink-black": "#1A1C1E",
+                    "on-secondary-fixed-variant": "#52452e",
+                    "on-primary-fixed": "#002117",
+                    "secondary": "#6a5d44",
+                    "primary": "#003527",
+                    "surface-container-high": "#e7e8e9",
+                    "surface": "#f8f9fa",
+                    "tertiary": "#4a2400",
+                    "background": "#f8f9fa",
+                    "on-secondary-container": "#6f6148",
+                    "tertiary-fixed": "#ffdcc3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "section-gap": "120px",
+                    "gutter-desktop": "32px",
+                    "component-gap": "24px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "stats-number": ["Inter"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .leopard-card:hover .meta-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .meta-overlay {
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-off-white text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-surface/90 backdrop-blur-md shadow-[0_10px_30px_rgba(6,78,59,0.05)]">
+<div class="hidden md:flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Jhalana Wilds</div>
+<div class="flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Leopards</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Zones</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Packages</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Ethical Safari</a>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded shadow-sm hover:scale-95 transition-transform font-label-bold text-label-bold">
+                    Check Availability
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] md:h-[716px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A cinematic, low-angle photograph of a Jhalana leopard lounging on a rocky granite outcrop during the golden hour. The lighting is warm and dramatic, highlighting the leopard's spotted coat against the deep forest green shadows of the Aravali hills. The overall aesthetic is high-end wildlife photography, with a shallow depth of field and soft bokeh, embodying the wilderness luxe brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKLxQJ9hK8ayXgnacTAUejIG1puxciAwiXIGe2Tb82ytZJLz_eLpC_tfOdZhFfG_u1sGogWpHEsiYAzBt3yw_BwkHkntbfrkoMCPLTJGGdD4EV1Agfj3YcZEQIAFHfkHAjze8rDImmQdr-4QroM_fx6m1zthgTcO7846YFRVrz06lbsmmGy3SvKnSFl07P7JJ_heeEtTiYkX9UsNQADOdsnTA9rc_2dcXDCibXOU-9i-VkWJ7cehPgvd2MK5LfUMCKrr9on2vFwvk')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-deep-forest/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-3 py-1 bg-sunset-amber text-on-primary font-label-bold text-label-bold rounded-sm mb-6 uppercase tracking-widest">Members Only</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-off-white mb-6">The Masterclass Collection</h1>
+<p class="font-body-lg text-body-lg text-off-white/90 leading-relaxed mb-8">
+                        Welcome back to the inner circle. This curated space is reserved for our workshop alumni to showcase the results of their field expertise and receive ongoing guidance from Jhalana's leading naturalists.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-aravali-sand text-deep-forest px-8 py-4 font-label-bold text-label-bold rounded hover:bg-leopard-gold transition-colors">Submit New Shot</button>
+<button class="border border-sunset-amber text-sunset-amber px-8 py-4 font-label-bold text-label-bold rounded hover:bg-sunset-amber/10 transition-colors">Download Metadata Logs</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Controls -->
+<section class="bg-surface py-8 border-b border-outline-variant/30">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex flex-wrap gap-4">
+<div class="relative">
+<select class="appearance-none bg-off-white border border-outline px-6 py-3 pr-12 rounded-lg font-label-bold text-label-bold text-deep-forest focus:ring-2 focus:ring-aravali-sand focus:border-deep-forest outline-none">
+<option>Workshops</option>
+<option>Monsoon Trail 2024</option>
+<option>Granite Guardians 2023</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-deep-forest">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-off-white border border-outline px-6 py-3 pr-12 rounded-lg font-label-bold text-label-bold text-deep-forest focus:ring-2 focus:ring-aravali-sand focus:border-deep-forest outline-none">
+<option>Species</option>
+<option>Leopard</option>
+<option>Hyena</option>
+<option>Nightjar</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-deep-forest">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-off-white border border-outline px-6 py-3 pr-12 rounded-lg font-label-bold text-label-bold text-deep-forest focus:ring-2 focus:ring-aravali-sand focus:border-deep-forest outline-none">
+<option>Seasons</option>
+<option>Summer Heat</option>
+<option>Monsoon Mist</option>
+<option>Winter Sun</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-deep-forest">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-bold text-label-bold">
+<span>Showing 24 masterclass captures</span>
+<button class="flex items-center gap-2 text-deep-forest">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="flex items-center gap-2">
+<span class="material-symbols-outlined">view_stream</span>
+</button>
+</div>
+</div>
+</section>
+<!-- High-Fidelity Gallery Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+<!-- Card 1 -->
+<div class="leopard-card group relative aspect-[4/5] bg-surface-container overflow-hidden rounded-xl shadow-[0_10px_30px_rgba(6,78,59,0.05)] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A professional vertical portrait of a leopard named Rana, captured in Jhalana. The leopard is looking directly at the camera with piercing amber eyes, its rosettes clearly defined against the soft, out-of-focus thorny shrubs of the Aravali forest. The light is soft morning sun, creating a premium, editorial wildlife aesthetic with rich deep greens and golden highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0Ohj01UUc92tK6rtFySSSerEBTvchpPgFhFn1_uQmsip3glcAUGChP8SYOKTAAKhxyUPSZVZLHVsPZIRyAF-8wNKTbepzmrznQHlgnLljKeNjUBKBVDng8ul5OPJNgktggoV3kRgWponlgPH4-CiU-ToIc43wuWN2PUgDoO8P3I4BUAs5MK23b9Tkiz0RinxM-Oq8Z31NXzqpllInVn4JNOJTk4y-i33YPj49Dt3zTEMZbQSXqiFfyIfQwsXakSF4bhEon0ySjwE')"></div>
+<div class="meta-overlay absolute bottom-0 left-0 right-0 p-8 glass-effect border-t border-off-white/10 text-off-white">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-1 italic">Leopard: Rana</h3>
+<p class="font-label-bold text-label-bold opacity-80 uppercase tracking-widest">Oct 2024 • Zone 1</p>
+</div>
+<div class="text-right">
+<p class="font-label-bold text-label-bold opacity-60">Photographer</p>
+<p class="font-body-md text-body-md text-aravali-sand">Alexander Thorne</p>
+</div>
+</div>
+</div>
+<div class="absolute top-4 right-4 bg-deep-forest/80 backdrop-blur-sm px-3 py-1 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-leopard-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-bold text-xs text-off-white">STAFF PICK</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="leopard-card group relative aspect-[4/5] bg-surface-container overflow-hidden rounded-xl shadow-[0_10px_30px_rgba(6,78,59,0.05)] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A dramatic high-fidelity wildlife photograph of a striped hyena scavenging in the twilight at Jhalana Wilds. The hyena's silhouette is sharp against the fading orange and purple sky. The setting is rocky terrain with sparse vegetation. The mood is mysterious and sophisticated, utilizing a dark, moody color palette consistent with luxury wildlife photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBenhFyji--zB2BdNCzFu9OGKuVu9w_bKixjuAMYiQ1W1xk_eNfPwNes6SAnN6sqjOvGfSN1D2wnqDKBLKcjjHD9xH0nKh8_tcyzHlzBPd-u92zhLh1_2Tmf1xftQkTiFikDoDPZRXgcIAxaEpW6DUhK03JnQUJqEaZXMBhQZtfXzQeTHsegYKy0rx33HDSs4GzZwBtUJ2H9vPMOAXQ3LHtgmr0nTkEmFlQCFVjftw7xuFOQGiy5WGFu53cxicZDyMEBwP_b2SCm0')"></div>
+<div class="meta-overlay absolute bottom-0 left-0 right-0 p-8 glass-effect border-t border-off-white/10 text-off-white">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-1 italic">Striped Hyena</h3>
+<p class="font-label-bold text-label-bold opacity-80 uppercase tracking-widest">Sept 2024 • Zone 2</p>
+</div>
+<div class="text-right">
+<p class="font-label-bold text-label-bold opacity-60">Photographer</p>
+<p class="font-body-md text-body-md text-aravali-sand">Maya Chen</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="leopard-card group relative aspect-[4/5] bg-surface-container overflow-hidden rounded-xl shadow-[0_10px_30px_rgba(6,78,59,0.05)] cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Close-up macro photography of a majestic Indian Eagle Owl perched on a gnarled branch in the Jhalana sanctuary. The owl's large, bright orange eyes are the focal point, with every feather detail visible. The lighting is low-key, emphasizing the luxury and exclusivity of the masterclass collection. Colors include deep browns, vibrant oranges, and soft neutral backgrounds." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGJKf-LXdJZHK5UMgKyEeXiD_694tIqwictf8ZCFS8JY5itJ9xnELwkBPoqrqdpaN1_GlmaS17JHWVzPH5F13Q3cIYWuAHy6TQNLBAKl6Ax4kOpovJNH-H5aKT42vrk_N4aALUu3u7pzPQqA3iUdRPYXzWkJkPAwHO0iOGSFqon9POCZ5N8Ty7FLVoIWQxYwdufvn4HbZPXrX41BnGZQV53g1Bv3MM1hMYFwIfBbyBpk4SVg-ASQL-QjIsa-R1RLjbaugrLws71ps')"></div>
+<div class="meta-overlay absolute bottom-0 left-0 right-0 p-8 glass-effect border-t border-off-white/10 text-off-white">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-1 italic">Indian Eagle Owl</h3>
+<p class="font-label-bold text-label-bold opacity-80 uppercase tracking-widest">Nov 2024 • Zone 3</p>
+</div>
+<div class="text-right">
+<p class="font-label-bold text-label-bold opacity-60">Photographer</p>
+<p class="font-body-md text-body-md text-aravali-sand">Jameson Blake</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Critique Corner -->
+<section class="bg-deep-forest text-off-white py-section-gap overflow-hidden relative">
+<!-- Subtle atmospheric overlay -->
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<div class="w-full h-full" style="background-image: radial-gradient(circle, #FFE9BF 1px, transparent 1px); background-size: 40px 40px;"></div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/3">
+<span class="text-sunset-amber font-label-bold text-label-bold uppercase tracking-widest mb-4 block">Expert Analysis</span>
+<h2 class="font-display-lg-mobile md:font-headline-md text-display-lg-mobile md:text-headline-md mb-6">The Critique Corner</h2>
+<p class="font-body-lg text-body-lg text-off-white/80 mb-8">
+                            Every month, our Lead Naturalist, Dr. Vikram Singh, selects three participant submissions for a deep-dive technical critique. Learn the nuances of composition, tracking, and post-processing in the wild.
+                        </p>
+<button class="bg-sunset-amber text-on-primary px-8 py-4 font-label-bold text-label-bold rounded hover:opacity-90 transition-all">Submit for Critique</button>
+</div>
+<div class="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white/5 border border-white/10 p-8 rounded-xl backdrop-blur-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-sunset-amber">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a distinguished male naturalist in his 50s, wearing safari gear. He has a warm, expert expression. The background is a blurred Jhalana forest. High-end, corporate modern style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIV8YCSiy0TSRotOjK2K1033d3aqx-SEWIrCqikyZXJE9XGwo5-0g1-pwgvRoqTVimCzyCFKDh7ewzLWZKHK3W6iAWHzK8uQpAcF87A-At7IGraGgA5PNA2zSwBQZ0y1du-TiVh8Z6v-3wTYVjO8dpdZTQ1uKEcGzIJpgLL3XW3oOpxcv1EdF8XkbaK8HJl4SitxUAMmZ3VgAkpGBEFGZ42lfrf_i28pNaEkz8vSAPJmyfDt2EFbp-V9N0OytUcUl8aZxqheY-0OE"/>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold">Dr. Vikram Singh</h4>
+<p class="text-xs text-aravali-sand uppercase">Lead Naturalist</p>
+</div>
+</div>
+<div class="mb-4 aspect-video rounded overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="A wildlife photograph of a leopard cub playfully jumping from a branch, used as an example for critique. The shot is slightly motion-blurred, highlighting the technical point being discussed. Wilderness luxe aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP4NjDIskfXVM2oz-gopzgSof6vaZBETpAyiJcpMozyI8ZS_J1ng_NW-3UTXdy8KNdfNGpDFqbMvjgwbmrfE-slvFbKF7iqBo17fqDwuOxcl3lzum9EMELvh11C5CdLHgoLGQF66rMZWYJ9A93D-S2JTZOTWyBlv-Zj-ylUkQLQ3OVIo1yU3ZOGfyYJvQDxyf4m0nz-N4flxVGAVYQrZg5PvJzxhmm_gTLzqhPvs6yAeaTaznVstihOfL52f253V4yUm036Ghn9pk"/>
+</div>
+<blockquote class="font-body-md text-body-md italic text-off-white/90">
+                                "The timing on Alexander's shot of Rana's leap is impeccable. To improve, I'd suggest a faster shutter speed—at least 1/2000s—to freeze that muscle ripple. The Aravali Sand background works perfectly here."
+                            </blockquote>
+</div>
+<div class="bg-white/5 border border-white/10 p-8 rounded-xl backdrop-blur-sm hidden md:block translate-y-12">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-sunset-amber">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young female wildlife photographer with cameras, smiling. Professional lighting, luxury outdoor photography aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhhnBRHEij2FeDdZHVNcARoLLtQDmVgUl3YXS6R5PgvAXHVv2ReLStRrujZbFr5hHgb6folqq8uTIIXIxSiyVNkNSs71F-9GK9gLJT8l-2zyRnA7Ku8AUDlM-to4CoNXWJUuu0vck_rcip0IxgcrBPBb68ea6G4T2IreMGlSIFP0OGzcPbkT3VD_ro8qx-V34bdH2Y7uCg6dmI2cXZP7cN42v25ZJ0TX1i_OmvUO835zfU4iE8lE39pzoiHxHGsuVblT3Ade1pR-4"/>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold">Sarah Jenkins</h4>
+<p class="text-xs text-aravali-sand uppercase">Conservation Liaison</p>
+</div>
+</div>
+<div class="mb-4 aspect-video rounded overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="A serene landscape photograph of the Jhalana hills at dawn with a soft fog layer. The colors are muted and peaceful. Editorial quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIe-CK-oN8kurv2rRm9netWBBzlgDBOQ-uH5NdlM9Tuy-TOvM7oa3X72QFASEnf-VjH9YKF4NmT6oFGDzRNitrvkfcphHFvZu2qZfFcRWMxxnI2QVFHhW_RO1BwcLNcpRcFpcdnpC-rjoJylmxnvV8LalnmyYwT_KbkXqBRz2HuYLZpNLrva6reP7S886USw5_BBQddxL5ghzoLXG8kscs-M69hm2SiYxI99w5a8MhZ4BTg1yQi5bRpUD5YQyjI2mB-quFkiFmGd8"/>
+</div>
+<blockquote class="font-body-md text-body-md italic text-off-white/90">
+                                "Maya's use of negative space in this hyena capture is textbook 'Wilderness Luxe'. The silhouette creates a story of survival. Excellent restraint on the post-processing saturation."
+                            </blockquote>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="bg-aravali-sand/30 p-12 md:p-24 rounded-3xl relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-deep-forest mb-6">Master the Wild Again.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                        Join our exclusive 'Predator &amp; Peak' Winter Workshop this December. Only 6 spots remaining for Masterclass members.
+                    </p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="bg-deep-forest text-off-white px-10 py-5 font-label-bold text-label-bold rounded-lg shadow-lg hover:-translate-y-1 transition-all">Secure My Spot</button>
+<button class="bg-transparent border-2 border-deep-forest text-deep-forest px-10 py-5 font-label-bold text-label-bold rounded-lg hover:bg-deep-forest hover:text-off-white transition-all">View Itinerary</button>
+</div>
+</div>
+<!-- Abstract Design Elements -->
+<div class="absolute -top-12 -left-12 w-64 h-64 rounded-full border border-deep-forest/10"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-sunset-amber/5"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-deep-forest dark:bg-ink-black">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-aravali-sand mb-8 md:mb-0">Jhalana Wilds</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-leopard-gold transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-leopard-gold transition-colors" href="#">Terms of Service</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-leopard-gold transition-colors" href="#">Sustainability Report</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-leopard-gold transition-colors" href="#">Community Impact</a>
+</div>
+<div class="font-body-md text-body-md text-off-white/80">© 2024 Jhalana Wilds. Conservation First Safari.</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-surface dark:bg-surface-dim shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-xl">
+<div class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-bold text-[10px]">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="radar">radar</span>
+<span class="font-label-bold text-[10px]">Live Tracker</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="font-label-bold text-[10px]">My Bookings</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-label-bold text-[10px]">Support</span>
+</div>
+</nav>
+<script>
+        // Micro-interaction for gallery filtering
+        const selectFields = document.querySelectorAll('select');
+        selectFields.forEach(select => {
+            select.addEventListener('change', () => {
+                select.parentElement.classList.add('scale-95');
+                setTimeout(() => {
+                    select.parentElement.classList.remove('scale-95');
+                }, 150);
+            });
+        });
+
+        // Simple Fade-in for cards on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.leopard-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            observer.observe(card);
+        });
+    </script>
+</body></html>

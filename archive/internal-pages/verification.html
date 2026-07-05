@@ -1,0 +1,465 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Jhalana Admin - Naturalist Verification Queue</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdcc3",
+                        "primary-fixed-dim": "#95d3ba",
+                        "outline-variant": "#bfc9c3",
+                        "on-surface-variant": "#404944",
+                        "surface": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2f1500",
+                        "inverse-surface": "#2e3132",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#191c1d",
+                        "outline": "#707974",
+                        "background": "#f8f9fa",
+                        "tertiary-container": "#6a3700",
+                        "primary-container": "#064e3b",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "secondary": "#6a5d44",
+                        "surface-container": "#edeeef",
+                        "ink-black": "#1A1C1E",
+                        "on-tertiary-container": "#ff9939",
+                        "aravali-sand": "#E7D4B5",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "leopard-gold": "#FFE9BF",
+                        "surface-dim": "#d9dadb",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary": "#003527",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e1e3e4",
+                        "primary-fixed": "#b0f0d6",
+                        "sunset-amber": "#D97706",
+                        "secondary-fixed-dim": "#d7c4a6",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#95d3ba",
+                        "deep-forest": "#064E3B",
+                        "secondary-container": "#f1ddbe",
+                        "tertiary": "#4a2400",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary-fixed-variant": "#52452e",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "on-primary-container": "#80bea6",
+                        "surface-tint": "#2b6954",
+                        "on-secondary-fixed": "#241a07",
+                        "off-white": "#F9FAFB",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "surface-container-high": "#e7e8e9",
+                        "on-secondary-container": "#6f6148",
+                        "secondary-fixed": "#f3e0c1",
+                        "on-primary-fixed": "#002117",
+                        "surface-container-highest": "#e1e3e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter-desktop": "32px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "component-gap": "24px",
+                        "section-gap": "120px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "stats-number": ["Inter"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .active-fill { font-variation-settings: 'FILL' 1 !important; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #bfc9c3; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #707974; }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(6, 78, 59, 0.1);
+        }
+
+        .leopard-card-shadow {
+            box-shadow: 0 10px 30px rgba(6, 78, 59, 0.05);
+        }
+        
+        .pulse-amber {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-hidden h-screen">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-screen w-64 bg-deep-forest dark:bg-ink-black flex flex-col py-6 px-4 z-50 text-aravali-sand">
+<div class="mb-10">
+<h1 class="font-headline-sm text-headline-sm text-aravali-sand tracking-tight">Jhalana Admin</h1>
+<p class="font-label-bold text-[10px] text-aravali-sand/60 uppercase tracking-widest mt-1">Elite Safari Management</p>
+</div>
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-aravali-sand/70 hover:text-aravali-sand transition-all duration-200" href="dashboard.html">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-bold text-label-bold">Analytics</span>
+</a>
+<!-- Active Tab: Conservation Data (Verification happens here) -->
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-on-primary-container rounded-lg font-label-bold shadow-sm scale-95 opacity-95 transition-all" href="sustainability.html">
+<span class="material-symbols-outlined active-fill">biotech</span>
+<span class="font-label-bold text-label-bold">Conservation Data</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-aravali-sand/70 hover:text-aravali-sand transition-all duration-200" href="booking.html">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-bold text-label-bold">Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-aravali-sand/70 hover:text-aravali-sand transition-all duration-200" href="feedback.html">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-label-bold text-label-bold">Marketing Tools</span>
+</a>
+</div>
+<button class="mt-4 mb-8 py-3 px-4 bg-sunset-amber text-on-primary font-label-bold rounded-lg flex items-center justify-center gap-2 hover:bg-tertiary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+            New Expedition
+        </button>
+<div class="border-t border-aravali-sand/10 pt-6 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-aravali-sand/70 hover:text-aravali-sand transition-all" href="dashboard.html">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-bold text-label-bold">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-aravali-sand/70 hover:text-aravali-sand transition-all" href="contact.html">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-bold text-label-bold">Support</span>
+</a>
+<div class="flex items-center gap-3 px-4 py-3 mt-4">
+<div class="w-8 h-8 rounded-full bg-aravali-sand overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a senior wildlife conservationist in field attire, soft studio lighting, high-end editorial style, warm tones reflecting the Jhalana wilderness aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFgGgC3T1o--qT4WbjMkphXU8zDNiJtmTdvUnbdDi8a4iq_e5sk0QUFo0yDvjv61-KKpDnAP-ukccl3IkMzt3RLBYEsvACVek23B-FOwIcBvGA84cXpmHnDPYeYN7P5ytCj4jwUSqSMAJgDJm30mNu3Qpv22ibBm3arHoYZOyPa2hAfbhrGgdM8KiND5b4oldATENnPRjCGAPwkBsbb782O-xyeb2Y4GcmcMRTTZ1eEZ_gKrZAZT7SiFcW_iVvNcdnqixYkMcoZUg">
+</div>
+<div>
+<p class="font-label-bold text-xs text-aravali-sand">Admin User</p>
+<p class="text-[10px] text-aravali-sand/50">Senior Naturalist</p>
+</div>
+</div>
+</div>
+</nav>
+<!-- TopNavBar (Integrated Layout) -->
+<header class="fixed top-0 right-0 left-64 h-16 bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-8 z-40">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-deep-forest">Wilderness Luxe</span>
+<div class="h-6 w-px bg-outline-variant"></div>
+<nav class="flex items-center gap-6">
+<a class="text-on-surface-variant font-label-bold hover:text-deep-forest transition-colors" href="dashboard.html">Dashboard</a>
+<a class="text-sunset-amber font-label-bold border-b-2 border-sunset-amber pb-1" href="verification.html">Verification Queue</a>
+<a class="text-on-surface-variant font-label-bold hover:text-deep-forest transition-colors" href="leopards.html">Catalog</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-deep-forest cursor-pointer">notifications</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-sunset-amber rounded-full"></span>
+</div>
+<button class="bg-deep-forest text-off-white px-6 py-2 rounded-lg font-label-bold hover:bg-primary transition-all">
+                Check Availability
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 h-full flex overflow-hidden">
+<!-- Left: Pending Verifications List -->
+<section class="w-1/3 border-r border-outline-variant flex flex-col h-full bg-surface-container-low">
+<div class="p-6 border-b border-outline-variant">
+<div class="flex justify-between items-center mb-4">
+<h2 class="font-headline-sm text-headline-sm text-deep-forest">Verification Queue</h2>
+<span class="bg-aravali-sand/30 px-3 py-1 rounded-full text-deep-forest font-label-bold text-xs">24 Pending</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-white border border-outline-variant px-3 py-2 rounded flex items-center justify-center gap-2 text-xs font-label-bold hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span> Filter
+                    </button>
+<button class="flex-1 bg-white border border-outline-variant px-3 py-2 rounded flex items-center justify-center gap-2 text-xs font-label-bold hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-sm">sort</span> Priority
+                    </button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Sighting Card 1 (Active/Selected) -->
+<div class="p-4 border-b border-outline-variant bg-white border-l-4 border-l-sunset-amber cursor-pointer transition-colors">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded bg-surface-variant overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="A close-up high-resolution photograph of a Jhalana leopard peeking through dry brush, golden afternoon sunlight illuminating its rosettes, documentary style photography, sharp detail and natural wilderness colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPp5IPxoCCYaI8wUGzGMOojtErN4eRX0ogbWqHHhdk1fODnYobZgsZb8yiTNfqCZiggCSne3zsvV82nbrZzx50n_O1OwddGd4_xLe59fLPhCxsESfMIXKgjgI-oQKUtx0qKoOgsvNIXQVsz6XFR1mLypbAfEsMnt9jmNe904uKI6uwX_DkY-piqvy3kUtqIGdjdzRk2iynxzYj88j7jsZGsZRIpBCz3kbl9zPFdIcGD32shRUvE01DeDDj6DH_NYGtcFQnS_GAKO0">
+<div class="absolute bottom-1 right-1 px-1 py-0.5 bg-sunset-amber rounded text-[8px] font-bold text-white flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px] pulse-amber" style="font-variation-settings: 'FILL' 1;">sensors</span> LIVE
+                            </div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-label-bold text-sm text-deep-forest truncate">Leopard: Rana</h3>
+<span class="text-[10px] text-on-surface-variant font-label-bold">14:22 PM</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">Observed by: <span class="text-deep-forest font-semibold">Devendra Singh</span></p>
+<div class="mt-2 flex items-center gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded text-[10px] font-bold">Zone 1</span>
+<span class="flex items-center text-[10px] text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-xs mr-1">star</span> High Confidence
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sighting Card 2 -->
+<div class="p-4 border-b border-outline-variant hover:bg-white/50 cursor-pointer transition-colors">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded bg-surface-variant overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover grayscale-[0.3]" data-alt="A medium shot of a leopard walking along a rocky Aravali ridge, silhouetted against a soft sunrise, deep forest green and sandy beige color palette, high-end wildlife editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH5kz0Wx5pvDc8RJ8J7vpGg5tNdBpCaOux9kcVvh7Q0LWgx-JD4l1AmCMzd3Ywm3vuJ8R-2zZT2ZAI9UxZVExZ5MwbzqWxO5_wuJ3lQP-ANNhUvKAratgVlAbpeHDHyDwfeAK6-craGYY3TENYhcGm9Z_oNxOV8we0bIPXWrA8qlvxkqFADbW75zh6eObpvTu8rfWAQIf8he_xFgUXqakWSBOS6XtJRWBkoKe2Cj8ld8jA3ilVs_Kfk5MvFJrpOYsN3Va8MyyYipg">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-label-bold text-sm text-deep-forest truncate">Unidentified Adult</h3>
+<span class="text-[10px] text-on-surface-variant font-label-bold">11:05 AM</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">Observed by: <span class="text-deep-forest font-semibold">Amit Sharma</span></p>
+<div class="mt-2 flex items-center gap-2">
+<span class="bg-surface-variant text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold">Zone 3</span>
+<span class="flex items-center text-[10px] text-on-surface-variant font-medium">
+<span class="material-symbols-outlined text-xs mr-1">help</span> Rosette Matching
+                                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Repeat Sighting Cards -->
+<div class="p-4 border-b border-outline-variant hover:bg-white/50 cursor-pointer transition-colors opacity-70">
+<div class="flex gap-4">
+<div class="w-20 h-20 rounded bg-surface-variant overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Wildlife trail camera capture of a leopard in the forest undergrowth at night, infrared aesthetic with soft contrast, professional conservation data visualization style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9VKNaN3hC-4sE2tSyEcGVYrHC0RsADHDJlFY67SgrSBJUt1k_tgvBKm507XiG6y5XEVuDEtB8GCJtGBdJRxWxcE5X_3D8Q1ygx3tNzctCur0f4vJfXZxsG2BU5ixI8Kaq5weAIEtwvZmLBb8pAfDbEeihAiMTSau6-cn7kK55c-Hx5z9YsrJwBJWoK_1mHbMmWHuTC18HH6ewCcOZVfZTNum1fA8EERiotrkEb-BrNL_RBDkn2qSqjWFhkuuwO09Jwqs4QAPbZaw">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<h3 class="font-label-bold text-sm text-deep-forest truncate">Leopard: Flora</h3>
+<span class="text-[10px] text-on-surface-variant font-label-bold">06:45 AM</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">Observed by: <span class="text-deep-forest font-semibold">Auto-Trigger C2</span></p>
+<div class="mt-2 flex items-center gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed px-2 py-0.5 rounded text-[10px] font-bold">Zone 2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right: Detailed Verification Pane -->
+<section class="flex-1 flex flex-col h-full bg-white relative overflow-hidden">
+<div class="p-8 flex-1 overflow-y-auto">
+<!-- Verification Header -->
+<div class="flex justify-between items-start mb-8">
+<div>
+<div class="flex items-center gap-3 mb-2">
+<span class="font-label-bold text-xs uppercase tracking-widest text-sunset-amber">Critical Verification Required</span>
+<span class="w-2 h-2 rounded-full bg-sunset-amber pulse-amber"></span>
+</div>
+<h1 class="font-headline-md text-headline-md text-deep-forest">Potential Sighting: 'Rana'</h1>
+<p class="text-on-surface-variant body-md mt-2 flex items-center gap-4">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">event</span> Nov 24, 2024</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 14:22:15</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> 26&deg;50'12"N 75&deg;48'33"E</span>
+</p>
+</div>
+<div class="text-right">
+<div class="font-stats-number text-3xl text-deep-forest">94%</div>
+<div class="font-label-bold text-[10px] uppercase text-on-surface-variant">Sighting Confidence Score</div>
+</div>
+</div>
+<!-- Media Display -->
+<div class="grid grid-cols-12 gap-6 mb-8">
+<div class="col-span-8 group relative rounded-lg overflow-hidden leopard-card-shadow border border-outline-variant aspect-video">
+<img class="w-full h-full object-cover" data-alt="High-resolution wildlife photography of a large male leopard (Rana) positioned on a branch, extremely sharp detail on his face and rosettes, natural daylight, soft bokeh forest background, prestigious National Geographic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqqx9UrAnW_vSNnu1U7EDqoiU96TMfTnWVYZzUkv1y3u_CF5I0PM0cbRzbrQtDfbPg-wxK64bIjHYFPMs-ef98ay0YqpvfGJGZiyFxWHeC9VrAU5XmM9UuGTjY1PBeIhMs-8HUQTl8sqv37q-VV4cb5Zg1CT0Z9UXSiYrhb9Bm0877QNjW6PIKLacxCSBH6yNf9NmiD0KfyDLuxR2TspsTzVzmFvwid7fBMOQAinPM7qLdAh9NRU3qFjbDfk34FDzwGmIIgBPzeUg">
+<div class="absolute inset-0 bg-gradient-to-t from-deep-forest/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="bg-white/90 backdrop-blur text-deep-forest px-4 py-2 rounded-full font-label-bold flex items-center gap-2">
+<span class="material-symbols-outlined">zoom_in</span> Full Screen Resolution
+                            </button>
+</div>
+</div>
+<div class="col-span-4 flex flex-col gap-4">
+<div class="glass-panel p-5 rounded-lg border border-outline-variant h-full">
+<h3 class="font-label-bold text-sm text-deep-forest mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sunset-amber" style="font-variation-settings: 'FILL' 1;">psychology</span> AI Rosette Matcher
+                            </h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-xs font-medium text-on-surface-variant">Match ID: Rana</span>
+<span class="text-xs font-bold text-deep-forest">98.2%</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-deep-forest h-full" style="width: 98%"></div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<span class="text-xs font-medium text-on-surface-variant">Match ID: Ghost</span>
+<span class="text-xs font-bold text-on-surface-variant">12.4%</span>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden">
+<div class="bg-outline h-full" style="width: 12%"></div>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/30">
+<div class="flex gap-2 mb-2">
+<div class="w-12 h-12 rounded border-2 border-sunset-amber overflow-hidden bg-surface">
+<img class="w-full h-full object-cover" data-alt="Macro photo of leopard rosettes pattern for identification comparison, technical biology documentation style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-sd2V0_CjVZFDjIzIo6RR2hC_JwDT9YnvHuSN_6FdAoO7FkLt2baCsbmT7wFYbbquDxC_Ke4auySwa2e0O5ydVGNBmvGbLH50i0wnAz_wpDZDI_D2QnOTyd75Ut8wqZwvXK44xg-4JZYqvyEccUEjerlEcS3CIr5bOv64p--ebdRHaZw4Xq_BTugnZpCn50i2xeCBtlOru78JEurgGKaLUhbVQclfydKw4Uxd-iKQceb0i5mUYix7vXrB6YwnWsS4npLUwNbl7-E">
+</div>
+<div class="w-12 h-12 rounded border border-outline-variant overflow-hidden bg-surface">
+<img class="w-full h-full object-cover" data-alt="Macro photo of reference leopard rosettes from database, high contrast black and white for pattern analysis." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWbRw0h1f78gIibT5doO5nI55eyEUk-MSGrfhE2FQLn4VviKwMVe8AUF1rzKAzRxztjgLj7OKQXjv3JY2TYQ4z_ExxhFXUiRciBlNQm6aillyP5Bgh9ZdcjW6gOSXqHwlY6wKk0AqN0BWRFbZnOq3xzrJzdNiQnTa070YtkXiB-l2GXHehhnPAsWliu3JMqV-dqjs3bmvSqTg5U_YjnwF_wEhv5cVTsjl3jsbDTJwev667xoPTzhdCZvfLrhLzDdgE0bwnJAdZ7mw">
+</div>
+<div class="flex-1 flex items-center justify-center bg-aravali-sand/20 rounded">
+<span class="text-[10px] font-label-bold text-deep-forest">+4 Refs</span>
+</div>
+</div>
+<p class="text-[10px] text-on-surface-variant leading-relaxed">
+                                        AI Matcher identifies primary dorsal cluster patterns identical to Rana's 2023 catalog profile.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contextual Data -->
+<div class="grid grid-cols-3 gap-6 mb-12">
+<div class="p-4 bg-surface-container rounded-lg border border-outline-variant">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">explore</span>
+<span class="text-[10px] font-label-bold uppercase text-on-surface-variant">Zone Context</span>
+</div>
+<p class="text-sm font-semibold text-deep-forest">Zone 1 - High Density Area</p>
+<p class="text-[10px] text-on-surface-variant mt-1">Frequent sightings of Rana in this quadrant over the last 72 hours.</p>
+</div>
+<div class="p-4 bg-surface-container rounded-lg border border-outline-variant">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">person</span>
+<span class="text-[10px] font-label-bold uppercase text-on-surface-variant">Observer Reliability</span>
+</div>
+<p class="text-sm font-semibold text-deep-forest">Devendra Singh (Senior)</p>
+<p class="text-[10px] text-on-surface-variant mt-1">99% verification rate across 450+ field reports.</p>
+</div>
+<div class="p-4 bg-surface-container rounded-lg border border-outline-variant">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">eco</span>
+<span class="text-[10px] font-label-bold uppercase text-on-surface-variant">Sustainability Impact</span>
+</div>
+<p class="text-sm font-semibold text-deep-forest">Citizen Scientist Vetted</p>
+<p class="text-[10px] text-on-surface-variant mt-1">This sighting contributes to the Jhalana Leopard Project annual census.</p>
+</div>
+</div>
+</div>
+<!-- Footer Action Bar -->
+<div class="p-6 bg-surface-container-lowest border-t border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="bg-white border border-outline text-on-surface-variant px-6 py-3 rounded font-label-bold flex items-center gap-2 hover:bg-surface transition-all">
+<span class="material-symbols-outlined">help</span> Request Clarification
+                    </button>
+<button class="bg-white border border-error text-error px-6 py-3 rounded font-label-bold flex items-center gap-2 hover:bg-error-container/20 transition-all">
+<span class="material-symbols-outlined">close</span> Reject Sighting
+                    </button>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-deep-forest px-6 py-3 rounded font-label-bold flex items-center gap-2">
+                        Next in Queue <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-deep-forest text-off-white px-10 py-3 rounded font-label-bold flex items-center gap-2 shadow-lg hover:bg-primary transition-all active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span> Verify Sighting
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Species Widget (Draggable Concept) -->
+<div class="fixed bottom-8 right-8 z-50">
+<div class="bg-deep-forest text-off-white p-1 rounded-full shadow-2xl flex items-center gap-3 pr-4 pl-1 border border-aravali-sand/30">
+<div class="w-10 h-10 rounded-full bg-aravali-sand flex items-center justify-center">
+<span class="material-symbols-outlined text-deep-forest">info</span>
+</div>
+<div class="leading-none">
+<p class="font-label-bold text-[10px] uppercase opacity-70">Species Helper</p>
+<p class="font-label-bold text-xs">Jhalana Leopard (Panthera pardus)</p>
+</div>
+</div>
+</div>
+<script>
+        // Micro-interaction: Active card selection
+        const cards = document.querySelectorAll('.flex-1.overflow-y-auto > div');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => {
+                    c.classList.remove('bg-white', 'border-l-4', 'border-l-sunset-amber');
+                    c.classList.add('hover:bg-white/50');
+                });
+                card.classList.add('bg-white', 'border-l-4', 'border-l-sunset-amber');
+                card.classList.remove('hover:bg-white/50');
+            });
+        });
+
+        // Verification Button Interaction
+        const verifyBtn = document.querySelector('button.bg-deep-forest');
+        verifyBtn.addEventListener('click', () => {
+            verifyBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Processing...';
+            setTimeout(() => {
+                verifyBtn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Verified';
+                verifyBtn.classList.replace('bg-deep-forest', 'bg-primary-container');
+            }, 1000);
+        });
+    </script>
+
+
+<script src="site-actions.js"></script>
+</body></html>
+
+
+
+
+
+
+
+
+
+

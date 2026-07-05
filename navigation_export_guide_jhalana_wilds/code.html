@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Navigation & Export Guide | Jhalana Wilds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#95d3ba",
+                        "secondary-fixed-dim": "#d7c4a6",
+                        "on-secondary-fixed-variant": "#52452e",
+                        "ink-black": "#1A1C1E",
+                        "on-tertiary-container": "#ff9939",
+                        "surface-container": "#edeeef",
+                        "surface-container-low": "#f3f4f5",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#4a2400",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#6a3700",
+                        "surface-tint": "#2b6954",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "secondary-fixed": "#f3e0c1",
+                        "aravali-sand": "#E7D4B5",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-high": "#e7e8e9",
+                        "background": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#bfc9c3",
+                        "surface-bright": "#f8f9fa",
+                        "outline": "#707974",
+                        "primary-fixed-dim": "#95d3ba",
+                        "on-secondary-fixed": "#241a07",
+                        "on-error": "#ffffff",
+                        "off-white": "#F9FAFB",
+                        "on-primary": "#ffffff",
+                        "leopard-gold": "#FFE9BF",
+                        "surface": "#f8f9fa",
+                        "on-secondary-container": "#6f6148",
+                        "on-surface-variant": "#404944",
+                        "error-container": "#ffdad6",
+                        "secondary": "#6a5d44",
+                        "primary-container": "#064e3b",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "primary": "#003527",
+                        "on-tertiary-fixed": "#2f1500",
+                        "secondary-container": "#f1ddbe",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d9dadb",
+                        "deep-forest": "#064E3B",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary-container": "#80bea6",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed": "#ffdcc3",
+                        "sunset-amber": "#D97706",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed": "#002117",
+                        "primary-fixed": "#b0f0d6",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "component-gap": "24px",
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "gutter-desktop": "32px"
+                    },
+                    "fontFamily": {
+                        "stats-number": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<div class="flex min-h-screen">
+<!-- Side Navigation (The Anchor) -->
+<aside class="hidden lg:flex flex-col h-screen sticky top-0 border-r border-outline-variant bg-surface-container-low w-64">
+<div class="p-6">
+<h1 class="text-body-lg font-headline-sm text-deep-forest tracking-tight">System Docs</h1>
+<p class="text-label-bold font-label-bold text-on-surface-variant uppercase mt-1">Wilderness Luxe v1.0</p>
+</div>
+<nav class="flex-1 px-3 py-4 space-y-1">
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mr-3">description</span>
+<span class="text-label-bold font-label-bold">Documentation</span>
+</a>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mr-3">folder_shared</span>
+<span class="text-label-bold font-label-bold">Asset Library</span>
+</a>
+<a class="flex items-center px-4 py-3 text-deep-forest font-bold border-r-4 border-deep-forest bg-aravali-sand/20" href="#">
+<span class="material-symbols-outlined mr-3">map</span>
+<span class="text-label-bold font-label-bold">File Mappings</span>
+</a>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mr-3">ios_share</span>
+<span class="text-label-bold font-label-bold">Export Guide</span>
+</a>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined mr-3">history</span>
+<span class="text-label-bold font-label-bold">Version Control</span>
+</a>
+</nav>
+<div class="p-4 border-t border-outline-variant bg-surface-container">
+<button class="w-full bg-deep-forest text-off-white py-3 rounded-lg text-label-bold font-label-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                    Download PDF
+                </button>
+<div class="mt-4 flex flex-col gap-1">
+<a class="flex items-center px-4 py-2 text-on-surface-variant hover:text-deep-forest" href="#">
+<span class="material-symbols-outlined mr-3 text-[18px]">help</span>
+<span class="text-label-bold font-label-bold">Support</span>
+</a>
+<a class="flex items-center px-4 py-2 text-on-surface-variant hover:text-deep-forest" href="#">
+<span class="material-symbols-outlined mr-3 text-[18px]">settings</span>
+<span class="text-label-bold font-label-bold">Settings</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 min-w-0 bg-off-white">
+<!-- Top App Bar -->
+<header class="w-full py-4 px-margin-desktop bg-surface flex justify-between items-center max-w-container-max mx-auto">
+<span class="text-headline-sm font-headline-sm font-bold text-deep-forest tracking-tight">JHALANA EXPEDITIONS</span>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8">
+<a class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Leopards</a>
+<a class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Safaris</a>
+<a class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Conservation</a>
+<a class="text-label-bold font-label-bold text-primary border-b-2 border-sunset-amber pb-1" href="#">Journal</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 text-label-bold font-label-bold rounded transition-transform active:scale-95">Check Availability</button>
+</div>
+</header>
+<!-- Utility Canvas -->
+<div class="px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="mb-12">
+<h2 class="font-headline-md text-headline-md text-deep-forest mb-2">Navigation & Export Guide</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">Production-ready asset mapping for the Jhalana Wilderness Luxe digital ecosystem. Use this utility to manage screen routing and deployment integrity.</p>
+</div>
+<!-- Asset Table -->
+<section class="mb-section-gap">
+<div class="overflow-hidden border border-outline-variant bg-surface-container-lowest rounded-xl">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high">
+<th class="p-4 text-label-bold font-label-bold text-deep-forest uppercase tracking-wider">Interface Module</th>
+<th class="p-4 text-label-bold font-label-bold text-deep-forest uppercase tracking-wider">Production Filename</th>
+<th class="p-4 text-label-bold font-label-bold text-deep-forest uppercase tracking-wider">Type</th>
+<th class="p-4 text-label-bold font-label-bold text-deep-forest uppercase tracking-wider text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-deep-forest">star</span>
+<span class="font-bold text-on-surface">Flagship Experience</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">index.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Main Page</td>
+<td class="p-4 text-right">
+<span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> READY
+                                        </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">smartphone</span>
+<span class="font-bold text-on-surface">Mobile Landing</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">mobile.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Responsive</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">event_available</span>
+<span class="font-bold text-on-surface">Expeditions & Booking</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">booking.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Transactional</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">pets</span>
+<span class="font-bold text-on-surface">Meet the Leopards</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">leopards.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Directory</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">photo_camera</span>
+<span class="font-bold text-on-surface">Photography Masterclass</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">masterclass.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Workshop</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">apps</span>
+<span class="font-bold text-on-surface">Field Companion App</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">app.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">PW App</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">psychology</span>
+<span class="font-bold text-on-surface">AI Species ID</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">species-id.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Utility</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-[12px] font-bold">ALPHA</span></td>
+</tr>
+<!-- Row 8 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">drive_eta</span>
+<span class="font-bold text-on-surface">Driver Portal</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">driver.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Internal</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 9 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">verified_user</span>
+<span class="font-bold text-on-surface">Naturalist Queue</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">verification.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Backend</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 10 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">dashboard</span>
+<span class="font-bold text-on-surface">Admin Dashboard</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">admin.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Management</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 11 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">perm_media</span>
+<span class="font-bold text-on-surface">Media Library</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">media.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Assets</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 12 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">eco</span>
+<span class="font-bold text-on-surface">Sustainability Dashboard</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">sustainability.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Impact Tracking</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 13 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">group_add</span>
+<span class="font-bold text-on-surface">Contact & Group Booking</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">contact.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Inquiry</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+<!-- Row 14 -->
+<tr class="hover:bg-aravali-sand/5 transition-colors">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">policy</span>
+<span class="font-bold text-on-surface">Policies & Compliance</span>
+</div>
+</td>
+<td class="p-4 font-mono text-sm text-sunset-amber">policies.html</td>
+<td class="p-4 text-label-bold font-label-bold text-on-surface-variant opacity-60">Legal</td>
+<td class="p-4 text-right"><span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">READY</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Quick Start Deployment -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-component-gap">
+<div class="col-span-1 md:col-span-3 mb-4">
+<h3 class="font-headline-sm text-headline-sm text-deep-forest">Quick Start Deployment</h3>
+</div>
+<div class="p-8 border border-outline-variant bg-aravali-sand/10 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">html</span>
+</div>
+<div class="relative">
+<div class="w-10 h-10 bg-deep-forest text-off-white rounded-full flex items-center justify-center font-bold mb-4">1</div>
+<h4 class="font-label-bold text-label-bold text-deep-forest uppercase mb-2">Export Code</h4>
+<p class="text-body-md text-on-surface-variant">Download the generated HTML, CSS, and asset bundles from the project repository.</p>
+</div>
+</div>
+<div class="p-8 border border-outline-variant bg-aravali-sand/10 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">edit_note</span>
+</div>
+<div class="relative">
+<div class="w-10 h-10 bg-deep-forest text-off-white rounded-full flex items-center justify-center font-bold mb-4">2</div>
+<h4 class="font-label-bold text-label-bold text-deep-forest uppercase mb-2">Namespace Mapping</h4>
+<p class="text-body-md text-on-surface-variant">Ensure file naming conventions strictly follow the table above to maintain relative linking.</p>
+</div>
+</div>
+<div class="p-8 border border-outline-variant bg-aravali-sand/10 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">cloud_upload</span>
+</div>
+<div class="relative">
+<div class="w-10 h-10 bg-deep-forest text-off-white rounded-full flex items-center justify-center font-bold mb-4">3</div>
+<h4 class="font-label-bold text-label-bold text-deep-forest uppercase mb-2">Netlify Push</h4>
+<p class="text-body-md text-on-surface-variant">Drag and drop your build folder into the Netlify dashboard or use CLI deploy command.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-desktop bg-surface border-t border-outline-variant flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto">
+<div class="mb-6 md:mb-0">
+<span class="text-headline-sm font-headline-sm text-primary">JHALANA WILDERNESS LUXE</span>
+<p class="text-label-bold font-label-bold text-on-surface-variant mt-2 uppercase tracking-tighter">© 2024 ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Ethical Guidelines</a>
+<a class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Sustainability Report</a>
+</div>
+</footer>
+</main>
+</div>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('tr').forEach(row => {
+            row.addEventListener('click', () => {
+                const filename = row.querySelector('.text-sunset-amber')?.innerText;
+                if (filename) {
+                    console.log(`Navigating to ${filename}...`);
+                    // Logic for previewing or opening the file
+                }
+            });
+        });
+    </script>
+</body></html>

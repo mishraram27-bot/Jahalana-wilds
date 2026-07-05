@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Citizen Scientist Certification | Jhalana Wilds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#002117",
+                        "secondary-container": "#f1ddbe",
+                        "tertiary-container": "#6a3700",
+                        "primary-fixed-dim": "#95d3ba",
+                        "deep-forest": "#064E3B",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "on-tertiary-container": "#ff9939",
+                        "on-background": "#191c1d",
+                        "secondary-fixed-dim": "#d7c4a6",
+                        "inverse-on-surface": "#f0f1f2",
+                        "leopard-gold": "#FFE9BF",
+                        "surface-container-high": "#e7e8e9",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed-variant": "#52452e",
+                        "tertiary-fixed": "#ffdcc3",
+                        "surface-container": "#edeeef",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "surface-bright": "#f8f9fa",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#6f6148",
+                        "on-primary-container": "#80bea6",
+                        "primary-fixed": "#b0f0d6",
+                        "surface-tint": "#2b6954",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#003527",
+                        "tertiary": "#4a2400",
+                        "surface-dim": "#d9dadb",
+                        "sunset-amber": "#D97706",
+                        "secondary": "#6a5d44",
+                        "outline": "#707974",
+                        "background": "#f8f9fa",
+                        "inverse-primary": "#95d3ba",
+                        "primary-container": "#064e3b",
+                        "on-secondary-fixed": "#241a07",
+                        "secondary-fixed": "#f3e0c1",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "off-white": "#F9FAFB",
+                        "outline-variant": "#bfc9c3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#404944",
+                        "aravali-sand": "#E7D4B5",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f4f5",
+                        "ink-black": "#1A1C1E",
+                        "on-tertiary-fixed": "#2f1500",
+                        "inverse-surface": "#2e3132",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter-desktop": "32px",
+                        "component-gap": "24px",
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "section-gap": "120px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-bold": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .certificate-textured-bg {
+            background-color: #F9FAFB;
+            background-image: url("https://www.transparenttextures.com/patterns/parchment.png");
+        }
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.03;
+            pointer-events: none;
+            width: 60%;
+        }
+        @media print {
+            .no-print { display: none; }
+            body { background: white; }
+            .certificate-container { box-shadow: none; border: 1px solid #eee; }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- Top Navigation Header (Suppressed as per rules for focus/transactional screen, but keeping product identity) -->
+<header class="w-full bg-surface/90 backdrop-blur-md sticky top-0 z-50 py-4 px-margin-desktop flex justify-between items-center shadow-sm">
+<div class="font-headline-md text-headline-md font-bold text-deep-forest">Jhalana Wilds</div>
+<div class="flex gap-gutter-desktop items-center">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Citizen Science Portal</span>
+<button class="bg-deep-forest text-off-white px-6 py-2 rounded-lg font-label-bold text-label-bold hover:scale-95 transition-transform duration-200">
+                Back to Dashboard
+            </button>
+</div>
+</header>
+<main class="min-h-screen flex flex-col items-center py-section-gap px-margin-mobile">
+<!-- Certificate Interaction Controls -->
+<div class="w-full max-w-[1000px] flex justify-end gap-4 mb-8 no-print">
+<button class="flex items-center gap-2 text-deep-forest bg-aravali-sand/30 px-4 py-2 rounded-xl hover:bg-aravali-sand/50 transition-all font-label-bold" onclick="window.print()">
+<span class="material-symbols-outlined">print</span>
+                Print Certificate
+            </button>
+<button class="flex items-center gap-2 text-deep-forest bg-aravali-sand/30 px-4 py-2 rounded-xl hover:bg-aravali-sand/50 transition-all font-label-bold">
+<span class="material-symbols-outlined">download</span>
+                Download PDF
+            </button>
+</div>
+<!-- The Certificate Canvas -->
+<div class="certificate-container relative w-full max-w-[1000px] aspect-[1.414/1] certificate-textured-bg border-[12px] border-deep-forest p-12 flex flex-col items-center justify-between shadow-[0_20px_50px_rgba(6,78,59,0.1)] overflow-hidden">
+<!-- Watermark -->
+<div class="watermark">
+<span class="material-symbols-outlined text-[400px] text-deep-forest" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<!-- Corner Accents -->
+<div class="absolute top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-sunset-amber"></div>
+<div class="absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-sunset-amber"></div>
+<div class="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-sunset-amber"></div>
+<div class="absolute bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-sunset-amber"></div>
+<!-- Header Section -->
+<div class="text-center z-10 w-full">
+<div class="flex justify-center mb-6">
+<img alt="Ethical Safari Badge" class="w-24 h-24 object-contain" src="assets/ethical-safari-badge.png"/>
+</div>
+<p class="font-label-bold text-label-bold text-sunset-amber uppercase tracking-[0.3em] mb-2">Preserving the Aravalli Legacy</p>
+<h1 class="font-display-lg text-display-lg text-deep-forest mb-4">Official Citizen Scientist Certification</h1>
+<div class="w-32 h-[1px] bg-sunset-amber mx-auto"></div>
+</div>
+<!-- Body Section -->
+<div class="text-center z-10 max-w-2xl px-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                    This certifies that <span class="font-display-lg text-headline-md text-deep-forest underline decoration-sunset-amber underline-offset-8 px-2">Alexander Thorne</span> has successfully contributed to the non-invasive tracking and conservation of the Aravalli leopards during their expedition on <span class="font-label-bold text-on-surface">October 24, 2024</span>.
+                </p>
+</div>
+<!-- Sightings & Details Grid -->
+<div class="grid grid-cols-3 w-full gap-8 z-10 mt-8">
+<!-- Sighting Badges -->
+<div class="col-span-2 bg-white/40 backdrop-blur-sm border border-deep-forest/10 p-6 rounded-xl">
+<p class="font-label-bold text-label-bold text-deep-forest uppercase mb-4 tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">visibility</span> Sighting Verification
+                    </p>
+<div class="flex gap-4">
+<!-- Sighted Leopards -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-16 h-16 rounded-full border-2 border-sunset-amber p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Close up portrait of a majestic female leopard named Flora with golden fur and distinct rosettes against a soft forest background in professional wildlife photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVJidVLptqDcwiiXgBI5CSMWKiJ-ASLFJdkcORCqZq_-7anNiBXcEF8gVkljsEC4bXG7taL9tc6TBTmNc_49YMxtAE6za-aSCC0vZaXz1kDWyzEJxPNQTn9mwNVpWkovK59daCxAya8l_ZXhzIomacJyFSyNBuThlsToBlTIo1KiYcaxmDPwYEtt8vPYL81yRviffur6BalVuMEbi_aDqG3ojV_-lMaTL9MdDeOnGMDPbCdmrb7M3gEmedMBNaUbopZBP6gMtsGg8')"></div>
+</div>
+<span class="font-label-bold text-[10px] text-deep-forest">FLORA</span>
+<div class="bg-sunset-amber text-off-white text-[8px] px-2 py-0.5 rounded-full font-bold">VERIFIED</div>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-100">
+<div class="w-16 h-16 rounded-full border-2 border-sunset-amber p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="High detail portrait of an alpha male leopard named Rana looking into the camera with piercing green eyes, captured in the warm light of the golden hour in Jhalana." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASxqD1Rb0Kq8fcIDe_T5PMWN3F92yH6zInbiIWlX8q5HpcSnysOa-hJu11e58vr1j0tQ9mCURxrZKCs7g9hxmeCoQvfQO4MUpVhbgxxIJ1DQxhFTpj2dbQMUcr_1panckbJYWeibAibTsR3p2MSsG0YBrZrHl-cmq99XBlgPro-wYh0dhXCgyPWEDyDq2OWiC771i43U7VNc3g0zNGgPX-4ORV1ijdDm5j4gKYrqIjyZ6B_FtnlB_0dp9AyCHQfqeq4SFBS4VVeCA')"></div>
+</div>
+<span class="font-label-bold text-[10px] text-deep-forest">RANA</span>
+<div class="bg-sunset-amber text-off-white text-[8px] px-2 py-0.5 rounded-full font-bold">VERIFIED</div>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-40 grayscale">
+<div class="w-16 h-16 rounded-full border border-outline p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="A portrait of a elusive leopard named Juliet, partially hidden in the dense green foliage of the Jhalana forest, captured in a documentary style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCax0NIYDwwGc3ymfBj4oFCw_3yKIqzje0jEzn2cZrx5r6S01kg--SyPKzkUlqel4kViJGj7uDF9rWwgqZwT4w50r13DlLQWQc9QHOqg6wKptpLzZMkpcMlEBrSu2gh_24hSawFJ0Ykh-eCOMG2FTxYbIQ2mE0m_kJIksHyldkCNIEzQlJWKi6EoWUEatD8_XsoqBY3JS0Qw7ikAS9B7wXzsZFTqxMJI5eFqHP7nRtvrOlg9ioNDgFatHcRYTn6vh0CsGUM2kewVqQ')"></div>
+</div>
+<span class="font-label-bold text-[10px] text-on-surface-variant">JULIET</span>
+</div>
+</div>
+</div>
+<!-- Expedition Details -->
+<div class="bg-deep-forest text-off-white p-6 rounded-xl flex flex-col justify-between">
+<div>
+<p class="text-[10px] uppercase tracking-widest opacity-70 mb-1">Expedition Zone</p>
+<p class="font-headline-sm text-headline-sm text-leopard-gold">Zone 1 (Core)</p>
+</div>
+<div class="mt-4 pt-4 border-t border-off-white/20">
+<p class="text-[10px] uppercase tracking-widest opacity-70 mb-1">Tracking ID</p>
+<p class="font-label-bold text-label-bold text-sunset-amber font-mono">JW-CS-2024-8892</p>
+</div>
+</div>
+</div>
+<!-- Signature Section -->
+<div class="w-full flex justify-between items-end mt-12 px-8 z-10">
+<div class="text-center">
+<div class="mb-2 italic font-serif text-deep-forest text-2xl border-b border-on-surface-variant pb-1 px-4">Rajesh V. Singh</div>
+<p class="font-label-bold text-[10px] text-on-surface-variant uppercase tracking-widest">Lead Naturalist & Head of Conservation</p>
+</div>
+<div class="flex flex-col items-end">
+<div class="text-deep-forest font-headline-sm font-bold mb-1">Jhalana Wilds</div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Official Seal of Authenticity</p>
+</div>
+</div>
+</div>
+<!-- Footer / Social CTA -->
+<footer class="mt-12 w-full max-w-[1000px] text-center no-print">
+<h3 class="font-headline-sm text-headline-sm text-deep-forest mb-4">Share your contribution with the world</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Your data helps us protect these apex predators. Tag your sighting reports to inspire others.</p>
+<div class="flex justify-center gap-6">
+<a class="flex items-center gap-2 text-deep-forest hover:text-sunset-amber transition-colors font-label-bold" href="contact.html">
+<span class="material-symbols-outlined">share</span>
+                    Instagram
+                </a>
+<a class="flex items-center gap-2 text-deep-forest hover:text-sunset-amber transition-colors font-label-bold" href="contact.html">
+<span class="material-symbols-outlined">public</span>
+                    LinkedIn
+                </a>
+<a class="flex items-center gap-2 text-deep-forest hover:text-sunset-amber transition-colors font-label-bold" href="contact.html">
+<span class="material-symbols-outlined">group</span>
+                    Wilderness Luxe Community
+                </a>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/30 text-[12px] text-on-surface-variant">
+                &copy; 2024 Jhalana Wilds. All rights reserved. Registered Citizen Scientist Partner.
+                <br/>
+                This document is a formal record of wildlife contribution and does not constitute official scientific authorship.
+            </div>
+</footer>
+</main>
+<!-- Bottom Navigation (As requested by shared components logic, but suppressed for this specific transactional view) -->
+<!-- Not rendered to prioritize the "Focused Journey" of receiving a certificate -->
+<script>
+        // Micro-interaction for hover states on verified leopard badges
+        document.querySelectorAll('.certificate-container div').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                if(el.classList.contains('verified-badge')) {
+                   el.style.transform = 'scale(1.05) rotate(2deg)';
+                }
+            });
+        });
+
+        // Simple animation on load to reveal the certificate
+        window.addEventListener('DOMContentLoaded', () => {
+            const cert = document.querySelector('.certificate-container');
+            cert.style.opacity = '0';
+            cert.style.transform = 'translateY(20px)';
+            cert.style.transition = 'all 1s cubic-bezier(0.16, 1, 0.3, 1)';
+            
+            setTimeout(() => {
+                cert.style.opacity = '1';
+                cert.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+<script src="site-actions.js"></script>
+</body></html>
+
+
+
+
+
+
+
+
+
+

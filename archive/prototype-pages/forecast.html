@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2026 Season Forecast | Jhalana Wilds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .heatmap-pulse {
+            animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.2; }
+            100% { transform: scale(0.8); opacity: 0.5; }
+        }
+        .map-container {
+            mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#2b6954",
+                        "on-primary-container": "#80bea6",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#191c1d",
+                        "tertiary-container": "#6a3700",
+                        "secondary": "#6a5d44",
+                        "sunset-amber": "#D97706",
+                        "on-primary-fixed": "#002117",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "on-secondary-fixed-variant": "#52452e",
+                        "off-white": "#F9FAFB",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-high": "#e7e8e9",
+                        "primary-container": "#064e3b",
+                        "inverse-primary": "#95d3ba",
+                        "primary-fixed": "#b0f0d6",
+                        "primary-fixed-dim": "#95d3ba",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9fa",
+                        "on-surface-variant": "#404944",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary-fixed": "#241a07",
+                        "deep-forest": "#064E3B",
+                        "secondary-fixed": "#f3e0c1",
+                        "tertiary-fixed": "#ffdcc3",
+                        "on-secondary-container": "#6f6148",
+                        "inverse-on-surface": "#f0f1f2",
+                        "outline-variant": "#bfc9c3",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed-dim": "#d7c4a6",
+                        "on-background": "#191c1d",
+                        "inverse-surface": "#2e3132",
+                        "outline": "#707974",
+                        "ink-black": "#1A1C1E",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#edeeef",
+                        "tertiary": "#4a2400",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#f1ddbe",
+                        "aravali-sand": "#E7D4B5",
+                        "leopard-gold": "#FFE9BF",
+                        "surface-variant": "#e1e3e4",
+                        "primary": "#003527",
+                        "on-tertiary-container": "#ff9939",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "gutter-desktop": "32px",
+                        "component-gap": "24px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "stats-number": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/90 backdrop-blur-md docked full-width top-0 sticky z-50 shadow-sm" id="top-nav">
+<div class="flex justify-between items-center px-6 md:px-16 py-4 w-full max-w-container-max mx-auto">
+<span class="font-headline-md text-headline-md font-bold text-deep-forest">Jhalana Wilds</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-deep-forest transition-colors font-label-bold text-label-bold" href="leopards.html">Leopards</a>
+<a class="text-on-surface-variant hover:text-deep-forest transition-colors font-label-bold text-label-bold" href="log.html">Zones</a>
+<a class="text-on-surface-variant hover:text-deep-forest transition-colors font-label-bold text-label-bold" href="booking.html">Packages</a>
+<a class="text-sunset-amber border-b-2 border-sunset-amber pb-1 font-label-bold text-label-bold" href="legal.html">Ethical Safari</a>
+</div>
+<button class="bg-deep-forest text-off-white px-6 py-2 rounded-lg font-label-bold text-label-bold transition-transform active:scale-95 duration-200">
+                Check Availability
+            </button>
+</div>
+</nav>
+<!-- Main Content Layout -->
+<main class="relative flex flex-col md:flex-row min-h-screen">
+<!-- Interactive Sidebar -->
+<aside class="w-full md:w-96 bg-surface-container-low p-8 z-40 border-r border-outline-variant flex flex-col gap-8">
+<section>
+<h1 class="font-headline-md text-headline-md text-deep-forest leading-tight mb-4">2026 Season Forecast</h1>
+<p class="text-on-surface-variant font-body-md">Citizen Scientist data-backed movement predictions for Jhalana and Amagarh reserves. Secure your window for 90%+ probability sightings.</p>
+</section>
+<!-- Season Selector -->
+<div class="flex flex-col gap-3">
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant">Select Forecast Window</span>
+<div class="grid grid-cols-1 gap-2">
+<button class="season-btn flex items-center justify-between p-4 rounded-xl bg-deep-forest text-off-white transition-all" onclick="updateSeason('Summer')">
+<span class="font-label-bold">Summer (Mar-Jun)</span>
+<span class="material-symbols-outlined">wb_sunny</span>
+</button>
+<button class="season-btn flex items-center justify-between p-4 rounded-xl bg-white text-deep-forest hover:bg-aravali-sand/30 transition-all" onclick="updateSeason('Monsoon')">
+<span class="font-label-bold">Monsoon (Jul-Sep)</span>
+<span class="material-symbols-outlined">water_drop</span>
+</button>
+<button class="season-btn flex items-center justify-between p-4 rounded-xl bg-white text-deep-forest hover:bg-aravali-sand/30 transition-all" onclick="updateSeason('Winter')">
+<span class="font-label-bold">Winter (Oct-Feb)</span>
+<span class="material-symbols-outlined">ac_unit</span>
+</button>
+</div>
+</div>
+<!-- Probability Legend -->
+<div class="p-6 bg-white rounded-xl shadow-sm border border-outline-variant">
+<h3 class="font-label-bold text-label-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sunset-amber">legend_toggle</span>
+                    SIGHTING PROBABILITY
+                </h3>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-4 h-4 rounded-full bg-deep-forest"></div>
+<span class="text-label-bold">90% - Peak Activity Zones</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-4 h-4 rounded-full bg-sunset-amber"></div>
+<span class="text-label-bold">75% - Migration Corridors</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-4 h-4 rounded-full bg-aravali-sand"></div>
+<span class="text-label-bold">50% - Emerging Territories</span>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="mt-auto bg-deep-forest p-6 rounded-xl text-off-white relative overflow-hidden group">
+<div class="relative z-10">
+<span class="inline-block bg-sunset-amber text-[10px] font-bold px-2 py-0.5 rounded-full mb-3 uppercase tracking-tighter">Early Bird Offer</span>
+<h4 class="font-headline-sm text-headline-sm mb-2">Summer 2026 Slots</h4>
+<p class="text-primary-fixed-dim text-sm mb-4">Book by Dec 2024 for exclusive sunrise access.</p>
+<button class="w-full bg-aravali-sand text-deep-forest font-label-bold text-label-bold py-3 rounded-lg hover:bg-leopard-gold transition-colors">
+                        Reserve Your Slot
+                    </button>
+</div>
+<!-- Abstract Pattern background decoration -->
+<div class="absolute -right-4 -bottom-4 opacity-10 rotate-12 group-hover:rotate-0 transition-transform duration-700">
+<span class="material-symbols-outlined text-9xl">pets</span>
+</div>
+</div>
+</aside>
+<!-- Interactive Map Canvas -->
+<section class="flex-1 relative bg-surface-container-high overflow-hidden min-h-[600px] md:min-h-screen">
+<!-- Map Layer -->
+<div class="absolute inset-0 w-full h-full map-container">
+<div class="w-full h-full bg-cover bg-center transition-opacity duration-1000" data-alt="A high-resolution, detailed topographic map of Jhalana and Amagarh Leopard Reserves. The map features hyper-realistic 3D terrain rendering with rocky outcroppings, sparse deciduous forest vegetation, and water bodies. Deep Forest Emerald contours and Aravali Sand colored paths define the geography. The style is professional and scientific, reminiscent of a high-end expedition map used by researchers." id="main-map-image" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnUZSqwu2SJu5dH12Uhk47k7hcOVuonLdFFH5hqkb8wcHtz34YYXWNpG6B7rSiX7G1B__0xP6gu9bUEmboZGkQWG4t2O8P7ZUz4DpuyvRqHBJOHplrfuaGMTmbacD0IF7CTInvJ1TabLBcxdphkliJSmihPZbY5Aix-3fTtNWD1Umg8S3Bv36FfJ9vXluJjBMb-0RZkbtzDwHgyH3cKUvjHZw9uXq9IbPSYJ2cUCWaod99afFbRDmDvRawnPXQ3CdYEm3REgfFSXw')">
+</div>
+</div>
+<!-- Interactive Overlay Elements -->
+<div class="absolute inset-0 pointer-events-none" id="heatmap-layer">
+<!-- Zone A Heatmap Pulse -->
+<div class="absolute top-[25%] left-[40%] w-32 h-32">
+<div class="absolute inset-0 bg-deep-forest/20 rounded-full heatmap-pulse"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-deep-forest rounded-full shadow-lg border-2 border-white"></div>
+<div class="glass-panel absolute top-full mt-2 left-1/2 -translate-x-1/2 p-3 rounded-lg border border-deep-forest/20 w-48 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="block font-label-bold text-xs text-deep-forest uppercase tracking-widest">Zone 1 Peak</span>
+<p class="text-[10px] text-on-surface-variant">Predicted Rana sightings: High frequency near water hole 4.</p>
+</div>
+</div>
+<!-- Zone B Movement Corridor (SVG Overlay) -->
+<svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<path d="M 450 300 Q 550 450 700 400" fill="none" opacity="0.4" stroke="url(#gradient-corridor)" stroke-dasharray="10 5" stroke-linecap="round" stroke-width="40">
+<animate attributename="stroke-dashoffset" dur="2s" from="15" repeatcount="indefinite" to="0"></animate>
+</path>
+<defs>
+<lineargradient id="gradient-corridor" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:var(--deep-forest);stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:var(--sunset-amber);stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Historical Markers -->
+<div class="absolute top-[45%] left-[65%] cursor-pointer group pointer-events-auto" title="Juliet's Territory">
+<div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-md border-2 border-sunset-amber group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm text-sunset-amber" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 glass-panel p-4 rounded-xl border border-sunset-amber/30 w-56 shadow-2xl opacity-0 group-hover:opacity-100 transition-all pointer-events-none">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-cover" data-alt="A close-up portrait of a majestic female leopard named Juliet, staring calmly with golden eyes. The photography style is National Geographic documentary level, with soft morning light hitting the spotted fur." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-of_v0RjknfhVxibLa1gMUlLhzFM58mT_ab3xGDg9EjZJrM6R2RD6oIfm263ZAH5__RerxoIL9OtWzFru-FVmdExM01FEHKma11zbpeiBiMUOtj6GyJQ6JCbyUatwnGzBnwapBq_4tm65-FhH5xtB5AIVbKumEiY8on9k9C7_BM2SSNkc9YP1DS3qdRr5Ll9GKOsVOO0GdgA35EnE44bzjbA75ESAWB0bY5ZdGoDtP2cxPk8olCmPcwcjmk4IHMPh08QPdotf0w8')"></div>
+<div>
+<h4 class="font-label-bold text-deep-forest">Juliet</h4>
+<p class="text-[10px] uppercase text-sunset-amber font-bold">Matriarch of Zone 2</p>
+</div>
+</div>
+<p class="text-[11px] leading-relaxed">Historical 2024-25 data shows 88% residency in this rocky corridor during Monsoon months.</p>
+</div>
+</div>
+<div class="absolute top-[60%] left-[30%] cursor-pointer group pointer-events-auto" title="Rana's Range">
+<div class="w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-md border-2 border-deep-forest group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm text-deep-forest" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 glass-panel p-4 rounded-xl border border-deep-forest/30 w-56 shadow-2xl opacity-0 group-hover:opacity-100 transition-all pointer-events-none">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-cover" data-alt="A portrait of a powerful male leopard named Rana, looking alert. The setting is the arid scrubland of Jhalana during twilight, with warm orange and cool blue lighting mixing. High-end wildlife photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyIW-8NQjTjBdwdwRwsShplnEdhPqr_ehyADU5FdSuHTLqtT6vGxK2uIMt_wV0IGzdz_8vHDcocQz3-L5BHgdIMp8vqoIGuQi2Qlf-GOSyIJFl3L2w54cjPNTBJ46Rq-WVDbgbwudwxf5pwyhq6dF6kWpaby99O3A50vsoerjmN4xvgJwJy_Vo0RxZy3D1jsS8AzgUUPVPzDiilDF-igcsG0-KiyWGt8f8cwPZTWJ1xWsynFXXxxpJ1YLilwQ8b1OavT9M_pIX608')"></div>
+<div>
+<h4 class="font-label-bold text-deep-forest">Rana</h4>
+<p class="text-[10px] uppercase text-on-surface-variant font-bold">Alpha of Amagarh</p>
+</div>
+</div>
+<p class="text-[11px] leading-relaxed">Largest recorded territory. Dominates the north-western ridge. 2026 forecast predicts new range expansion.</p>
+</div>
+</div>
+</div>
+<!-- Floating Status Bar -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 glass-panel px-8 py-4 rounded-full border border-white/40 shadow-xl flex items-center gap-8 z-30">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+<span class="font-label-bold text-label-bold text-deep-forest">LIVE FEED ANALYSIS</span>
+</div>
+<div class="h-6 w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Active Sighting Probability</span>
+<span class="text-deep-forest font-stats-number text-stats-number">94.2%</span>
+</div>
+<div class="h-6 w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Data Sources</span>
+<span class="text-deep-forest font-stats-number text-stats-number">1,240 Nodes</span>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute right-10 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-30">
+<button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-deep-forest hover:bg-aravali-sand transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-deep-forest hover:bg-aravali-sand transition-colors">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-deep-forest hover:bg-aravali-sand transition-colors">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Detailed Insights Section -->
+<section class="py-section-gap px-margin-desktop bg-white border-t border-outline-variant">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="font-label-bold text-label-bold text-sunset-amber uppercase tracking-[0.2em] mb-4 block">Scientific Methodology</span>
+<h2 class="font-headline-md text-headline-md text-deep-forest">How we predict the 2026 Leopard Corridors</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-md">
+                    Our forecast models integrate 10 years of historical sighting records with satellite-based vegetation health (NDVI) and predicted precipitation cycles.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-component-gap">
+<!-- Bento Card 1 -->
+<div class="p-8 rounded-2xl bg-surface-container-low flex flex-col border border-outline-variant group hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-deep-forest mb-6 text-4xl">radar</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Historical Heatmaps</h3>
+<p class="text-on-surface-variant mb-6">Aggregate data from over 15,000 verified sightings since 2015, weighted by individual leopard territory fidelity.</p>
+<div class="mt-auto flex items-center gap-2 text-sunset-amber font-label-bold text-label-bold cursor-pointer">
+                        View Raw Data <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Bento Card 2 -->
+<div class="p-8 rounded-2xl bg-surface-container-low flex flex-col border border-outline-variant group hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-deep-forest mb-6 text-4xl">water_ec</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Hydrology Tracking</h3>
+<p class="text-on-surface-variant mb-6">Monitoring 42 water bodies in the reserve. Predictions adjust based on the drying cycles of ephemeral streams.</p>
+<div class="mt-auto flex items-center gap-2 text-sunset-amber font-label-bold text-label-bold cursor-pointer">
+                        Water Analysis <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Bento Card 3 -->
+<div class="p-8 rounded-2xl bg-deep-forest text-off-white flex flex-col border border-deep-forest group hover:shadow-xl transition-all">
+<span class="material-symbols-outlined text-leopard-gold mb-6 text-4xl">verified</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">98% Accuracy</h3>
+<p class="text-primary-fixed-dim mb-6">Our 2024 seasonal forecast achieved a record accuracy in predicting territorial shifts in the Amagarh range extension.</p>
+<div class="mt-auto flex items-center gap-2 text-leopard-gold font-label-bold text-label-bold cursor-pointer">
+                        Trust Our Data <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-deep-forest py-section-gap px-margin-desktop text-off-white border-t border-primary-container">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-component-gap">
+<div class="flex flex-col gap-6">
+<span class="font-headline-sm text-headline-sm text-leopard-gold">Jhalana Wilds</span>
+<p class="max-w-xs text-primary-fixed-dim font-body-md opacity-80">Empowering conservation through high-end ecotourism and citizen science data tracking in the heart of Jaipur's leopard country.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-leopard-gold transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-leopard-gold transition-colors">camera</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-leopard-gold transition-colors">mail</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-12 md:gap-24">
+<div class="flex flex-col gap-4">
+<h5 class="font-label-bold text-label-bold uppercase text-sunset-amber">Explore</h5>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="log.html">Zone Map</a>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="booking.html">Safari Packages</a>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="contact.html">Accommodation</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-bold text-label-bold uppercase text-sunset-amber">Impact</h5>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="sustainability.html">Sustainability Pledge</a>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="leopards.html">Citizen Science</a>
+<a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="sustainability.html">Community Support</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-24 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-primary-fixed-dim text-sm opacity-60">&copy; 2024 Jhalana Wilds. All rights reserved. Registered Citizen Scientist Partner.</p>
+<div class="flex gap-8 text-sm opacity-60">
+<a class="hover:text-off-white transition-colors" href="legal.html">Terms of Service</a>
+<a class="hover:text-off-white transition-colors" href="legal.html">Privacy Policy</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell -->
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-margin-mobile py-2 md:hidden bg-surface-container-low shadow-[0_-4px_12px_rgba(6,78,59,0.08)] z-50 rounded-t-xl" id="bottom-nav">
+<a class="flex flex-col items-center justify-center bg-aravali-sand text-deep-forest rounded-xl px-4 py-2 transition-all active:scale-95" href="index.html">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-bold text-[10px]">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 transition-all active:scale-95" href="log.html">
+<span class="material-symbols-outlined">radar</span>
+<span class="font-label-bold text-[10px]">Tracker</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 transition-all active:scale-95" href="booking.html">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-label-bold text-[10px]">Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 transition-all active:scale-95" href="contact.html">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-label-bold text-[10px]">Support</span>
+</a>
+</div>
+<script>
+        function updateSeason(season) {
+            const buttons = document.querySelectorAll('.season-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-deep-forest', 'text-off-white');
+                btn.classList.add('bg-white', 'text-deep-forest');
+            });
+            
+            const selectedBtn = Array.from(buttons).find(btn => btn.innerText.includes(season));
+            if(selectedBtn) {
+                selectedBtn.classList.add('bg-deep-forest', 'text-off-white');
+                selectedBtn.classList.remove('bg-white', 'text-deep-forest');
+            }
+
+            // Visual effect transition for map layer
+            const mapLayer = document.getElementById('heatmap-layer');
+            mapLayer.style.opacity = '0';
+            setTimeout(() => {
+                // In a real app, this would change path data or pulse positions
+                mapLayer.style.opacity = '1';
+            }, 500);
+        }
+
+        // Micro-interaction for hover states on map markers
+        document.querySelectorAll('.group').forEach(marker => {
+            marker.addEventListener('mouseenter', () => {
+                // Add specific sound or haptic feedback triggers here if needed
+            });
+        });
+    </script>
+<script src="site-actions.js"></script>
+</body></html>
+
+
+
+
+
+
+
+

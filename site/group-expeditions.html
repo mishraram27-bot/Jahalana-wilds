@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Group & Corporate Expeditions | Jhalana Wilds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary-container": "#6a3700",
+                "inverse-on-surface": "#f0f1f2",
+                "surface-container": "#edeeef",
+                "on-secondary": "#ffffff",
+                "error-container": "#ffdad6",
+                "primary-fixed-dim": "#95d3ba",
+                "inverse-surface": "#2e3132",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed": "#f3e0c1",
+                "ink-black": "#1A1C1E",
+                "surface-container-highest": "#e1e3e4",
+                "surface-container-high": "#e7e8e9",
+                "surface": "#f8f9fa",
+                "secondary-container": "#f1ddbe",
+                "outline-variant": "#bfc9c3",
+                "leopard-gold": "#FFE9BF",
+                "on-secondary-fixed": "#241a07",
+                "tertiary-fixed": "#ffdcc3",
+                "error": "#ba1a1a",
+                "primary": "#003527",
+                "on-error": "#ffffff",
+                "surface-tint": "#2b6954",
+                "deep-forest": "#064E3B",
+                "on-surface-variant": "#404944",
+                "aravali-sand": "#E7D4B5",
+                "on-primary-fixed-variant": "#0b513d",
+                "surface-bright": "#f8f9fa",
+                "outline": "#707974",
+                "tertiary": "#4a2400",
+                "surface-container-low": "#f3f4f5",
+                "on-error-container": "#93000a",
+                "surface-variant": "#e1e3e4",
+                "surface-container-lowest": "#ffffff",
+                "background": "#f8f9fa",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed": "#2f1500",
+                "secondary": "#6a5d44",
+                "on-secondary-container": "#6f6148",
+                "on-primary-fixed": "#002117",
+                "on-secondary-fixed-variant": "#52452e",
+                "inverse-primary": "#95d3ba",
+                "on-tertiary-fixed-variant": "#6e3900",
+                "on-background": "#191c1d",
+                "on-primary-container": "#80bea6",
+                "primary-fixed": "#b0f0d6",
+                "on-tertiary-container": "#ff9939",
+                "on-surface": "#191c1d",
+                "tertiary-fixed-dim": "#ffb77d",
+                "primary-container": "#064e3b",
+                "sunset-amber": "#D97706",
+                "surface-dim": "#d9dadb",
+                "off-white": "#F9FAFB"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "component-gap": "24px",
+                "gutter-desktop": "32px",
+                "base": "8px",
+                "section-gap": "120px",
+                "margin-mobile": "20px",
+                "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                "display-lg": ["Playfair Display"],
+                "headline-md": ["Playfair Display"],
+                "body-lg": ["Inter"],
+                "stats-number": ["Inter"],
+                "label-bold": ["Inter"],
+                "body-md": ["Inter"],
+                "headline-sm": ["Playfair Display"],
+                "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .leopard-mask {
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link href="assets/launch-polish.css" rel="stylesheet"/>
+</head>
+<body class="bg-off-white text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-surface/90 dark:bg-primary/90 dock full-width top-0 sticky z-50 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile py-4 w-full max-w-container-max mx-auto md:px-margin-desktop">
+<div class="font-headline-md text-headline-md font-bold text-deep-forest dark:text-primary-fixed">Jhalana Wilds</div>
+<!-- Desktop Links (Hidden on Mobile) -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-primary-fixed-dim hover:text-deep-forest transition-colors font-label-bold text-label-bold" href="leopards.html">Leopards</a>
+<a class="text-on-surface-variant dark:text-primary-fixed-dim hover:text-deep-forest transition-colors font-label-bold text-label-bold" href="booking.html">Packages</a>
+<a class="text-on-surface-variant dark:text-primary-fixed-dim hover:text-deep-forest transition-colors font-label-bold text-label-bold" href="legal.html">Ethical Safari</a>
+</div>
+<!-- CTA -->
+<button class="bg-deep-forest text-off-white px-6 py-2 rounded-lg font-label-bold text-label-bold transition-transform active:scale-95">
+                Check on WhatsApp
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[530px] flex items-end">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-resolution portrait of a majestic leopard resting on an ancient stone outcrop in the Jhalana forest during the golden hour. The lighting is warm and ethereal, highlighting the intricate patterns of the leopard's fur. The background features the rugged Aravali landscape under a soft, hazy sky. The overall aesthetic is luxurious, wild, and evocative of a high-end wildlife expedition, utilizing the deep greens and warm ambers of the Jhalana Wilds brand palette." style="background-image: url('assets/images/corporate-group-leopard-safari-hero.jpg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-forest/80 via-deep-forest/20 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile pb-12 w-full">
+<span class="font-label-bold text-label-bold text-sunset-amber uppercase tracking-widest block mb-2">Exclusive Access</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-off-white max-w-sm">Group & Corporate Expeditions</h1>
+</div>
+</section>
+<!-- Inquiry Flow -->
+<section class="py-16 px-margin-mobile bg-off-white">
+<div class="max-w-xl mx-auto">
+<div class="mb-10">
+<h2 class="font-headline-md text-headline-md text-deep-forest mb-4">Plan Your Journey</h2>
+<p class="text-on-surface-variant font-body-md">Tailored experiences for research teams, corporate retreats, and private wildlife photography groups.</p>
+</div>
+<p class="mb-6 text-sm leading-relaxed text-on-surface-variant bg-surface-container-low p-4 border-l-4 border-sunset-amber">
+Safari bookings are manually coordinated after enquiry. Final availability, permit requirements, vehicle allocation, pickup details, and payment process are confirmed over phone or WhatsApp.
+Safari sightings are natural and cannot be guaranteed. Booking assistance is subject to availability, permit rules, vehicle allocation, and final confirmation over phone or WhatsApp.
+</p>
+<!-- Form -->
+<form class="space-y-6" name="group-mobile-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html"><input type="hidden" name="form-name" value="group-mobile-inquiry"/><p class="hidden"><label>Do not fill this out if you are human: <input name="bot-field"/></label></p>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-deep-forest">Organization Name</label>
+<input class="w-full px-4 py-3 bg-white border border-deep-forest/20 rounded-xl focus:ring-2 focus:ring-aravali-sand focus:border-deep-forest outline-none transition-all" name="organization" placeholder="e.g. National Geographic Society" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-deep-forest">Group Size</label>
+<select class="w-full px-4 py-3 bg-white border border-deep-forest/20 rounded-xl focus:ring-2 focus:ring-aravali-sand outline-none transition-all appearance-none" name="group-size">
+<option>1-5 Members</option>
+<option>6-12 Members</option>
+<option>12+ Members</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-deep-forest">Primary Interest</label>
+<select class="w-full px-4 py-3 bg-white border border-deep-forest/20 rounded-xl focus:ring-2 focus:ring-aravali-sand outline-none transition-all appearance-none" name="primary-interest">
+<option>Photography</option>
+<option>Conservation</option>
+<option>Corporate Retreat</option>
+</select>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-deep-forest">Preferred Date Range</label>
+<input class="w-full px-4 py-3 bg-white border border-deep-forest/20 rounded-xl focus:ring-2 focus:ring-aravali-sand outline-none transition-all" name="date-range" placeholder="Month or Specific Dates" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-bold text-label-bold text-deep-forest">Enquiry Details</label>
+<textarea class="w-full px-4 py-3 bg-white border border-deep-forest/20 rounded-xl focus:ring-2 focus:ring-aravali-sand outline-none transition-all" name="requirements" placeholder="Pickup needs, dietary notes, photography goals, or group requirements..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-deep-forest text-off-white font-label-bold text-label-bold rounded-xl shadow-lg shadow-deep-forest/10 active:scale-95 transition-transform" type="submit">
+                        Submit Inquiry
+                    </button>
+</form>
+<!-- Trust Badges -->
+<div class="mt-12 flex items-center justify-center gap-8 py-6 border-y border-aravali-sand/30">
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-aravali-sand/20 flex items-center justify-center text-deep-forest">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<span class="font-label-bold text-[10px] uppercase tracking-wider text-deep-forest">Ethical Safari</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-aravali-sand/20 flex items-center justify-center text-deep-forest">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">observed_user</span>
+</div>
+<span class="font-label-bold text-[10px] uppercase tracking-wider text-deep-forest">Secure Assistance</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-aravali-sand/20 flex items-center justify-center text-deep-forest">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">biotech</span>
+</div>
+<span class="font-label-bold text-[10px] uppercase tracking-wider text-deep-forest">Wildlife Learning</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Local Presence Section -->
+<section class="py-16 px-margin-mobile bg-white">
+<div class="max-w-xl mx-auto space-y-6">
+<h3 class="font-headline-sm text-headline-sm text-deep-forest mb-8">Direct Contact</h3>
+<!-- Operations HQ -->
+<div class="bg-surface-container-low p-6 rounded-xl flex justify-between items-center border border-transparent active:border-aravali-sand transition-all">
+<div>
+<h4 class="font-label-bold text-label-bold text-deep-forest">Operations HQ</h4>
+<p class="text-on-surface-variant text-sm">Jaipur City Center</p>
+</div>
+<div class="flex gap-3">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-deep-forest shadow-sm border border-deep-forest/5" href="tel:+918387817123">
+<span class="material-symbols-outlined text-xl">call</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-deep-forest shadow-sm border border-deep-forest/5" href="leopards.html">
+<span class="material-symbols-outlined text-xl">map</span>
+</a>
+</div>
+</div>
+<!-- Safari Entry Hub -->
+<div class="bg-surface-container-low p-6 rounded-xl flex justify-between items-center border border-transparent active:border-aravali-sand transition-all">
+<div>
+<h4 class="font-label-bold text-label-bold text-deep-forest">Safari Entry Hub</h4>
+<p class="text-on-surface-variant text-sm">Jhalana Gate 1</p>
+</div>
+<div class="flex gap-3">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-deep-forest shadow-sm border border-deep-forest/5" href="https://www.google.com/maps/search/?api=1&query=Jhalana+Leopard+Reserve+Gate+1+Jaipur">
+<span class="material-symbols-outlined text-xl">directions_car</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-deep-forest shadow-sm border border-deep-forest/5" href="https://wa.me/918387817123">
+<span class="material-symbols-outlined text-xl">chat</span>
+</a>
+</div>
+</div>
+<!-- Guest Support -->
+<div class="bg-surface-container-low p-6 rounded-xl flex justify-between items-center border border-transparent active:border-aravali-sand transition-all">
+<div>
+<h4 class="font-label-bold text-label-bold text-deep-forest">Guest Support</h4>
+<p class="text-on-surface-variant text-sm">Enquiry Assistance</p>
+</div>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-deep-forest shadow-sm border border-deep-forest/5" href="mailto:support@jhalanawilds.com">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component - Mobile Only) -->
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-margin-mobile py-2 md:hidden bg-surface-container-low dark:bg-deep-forest shadow-[0_-4px_12px_rgba(6,78,59,0.08)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container p-2 active:scale-95 transition-all" href="index.html">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-bold text-[10px] mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container p-2 active:scale-95 transition-all" href="leopards.html">
+<span class="material-symbols-outlined">radar</span>
+<span class="font-label-bold text-[10px] mt-1">Safari Guide</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-primary-container p-2 active:scale-95 transition-all" href="booking.html">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-label-bold text-[10px] mt-1">Enquiry</span>
+</a>
+<div class="flex flex-col items-center justify-center bg-aravali-sand dark:bg-primary-container text-deep-forest dark:text-primary-fixed rounded-xl px-4 py-2 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<span class="font-label-bold text-[10px] mt-1">Support</span>
+</div>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-20 px-margin-mobile flex flex-col items-start gap-12 bg-deep-forest dark:bg-ink-black text-off-white mb-20 md:mb-0 md:px-margin-desktop md:flex-row md:justify-between">
+<div class="space-y-4">
+<div class="font-headline-sm text-headline-sm text-leopard-gold">Jhalana Wilds</div>
+<p class="max-w-xs text-primary-fixed-dim font-body-md">Preserving the untamed beauty of Jhalana while providing world-class leopard tracking expeditions.</p>
+</div>
+<div class="grid grid-cols-2 gap-8 w-full md:w-auto">
+<div class="space-y-4">
+<h5 class="font-label-bold text-label-bold text-leopard-gold uppercase tracking-wider">Navigation</h5>
+<ul class="space-y-2">
+<li><a class="text-primary-fixed-dim hover:text-off-white hover:underline transition-all font-body-md" href="legal.html">Terms of Service</a></li>
+<li><a class="text-primary-fixed-dim hover:text-off-white hover:underline transition-all font-body-md" href="legal.html">Privacy Policy</a></li>
+<li><a class="text-primary-fixed-dim hover:text-off-white hover:underline transition-all font-body-md" href="legal.html">Sustainability Pledge</a></li>
+<li><a class="text-primary-fixed-dim hover:text-off-white hover:underline transition-all font-body-md" href="leopards.html">Leopard Guide</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-bold text-label-bold text-leopard-gold uppercase tracking-wider">Social</h5>
+<ul class="space-y-2">
+<li><a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="contact.html">Instagram</a></li>
+<li><a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="contact.html">X (Twitter)</a></li>
+<li><a class="text-primary-fixed-dim hover:text-off-white transition-all font-body-md" href="leopards.html">Leopard Guide</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full pt-8 border-t border-primary-container text-primary-fixed-dim text-xs opacity-80">
+            &copy; 2024 Jhalana Wilds. All rights reserved. Registered Wildlife Guest Partner.
+        </div>
+</footer>
+<script>
+        // Micro-interaction for form inputs
+        document.querySelectorAll('input, select, textarea').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.querySelector('label').style.color = '#D97706'; // sunset-amber
+            });
+            el.addEventListener('blur', () => {
+                el.parentElement.querySelector('label').style.color = '#064E3B'; // deep-forest
+            });
+        });
+
+        // Simple submission mock
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Transmitting Inquiry...';
+            btn.style.backgroundColor = '#D97706';
+            setTimeout(() => {
+                btn.innerText = 'Inquiry Sent Successfully';
+                btn.style.backgroundColor = '#2b6954';
+                e.target.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '#064E3B';
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+<script src="site-actions.js"></script>
+</body></html>
+
+
+
+
+
+
+
+

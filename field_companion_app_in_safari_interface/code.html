@@ -1,0 +1,269 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>Jhalana Wilds: Field Companion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary": "#6a5d44",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "primary": "#003527",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-container": "#edeeef",
+                    "ink-black": "#1A1C1E",
+                    "surface-container-high": "#e7e8e9",
+                    "leopard-gold": "#FFE9BF",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#95d3ba",
+                    "surface": "#f8f9fa",
+                    "deep-forest": "#064E3B",
+                    "tertiary-fixed": "#ffdcc3",
+                    "on-primary-fixed-variant": "#0b513d",
+                    "tertiary-container": "#6a3700",
+                    "primary-fixed": "#b0f0d6",
+                    "secondary-container": "#f1ddbe",
+                    "on-secondary-fixed-variant": "#52452e",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#002117",
+                    "secondary-fixed": "#f3e0c1",
+                    "on-background": "#191c1d",
+                    "background": "#f8f9fa",
+                    "off-white": "#F9FAFB",
+                    "tertiary": "#4a2400",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-container": "#ff9939",
+                    "sunset-amber": "#D97706",
+                    "surface-tint": "#2b6954",
+                    "on-tertiary-fixed": "#2f1500",
+                    "outline-variant": "#bfc9c3",
+                    "on-primary-container": "#80bea6",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-primary": "#95d3ba",
+                    "aravali-sand": "#E7D4B5",
+                    "on-secondary-fixed": "#241a07",
+                    "outline": "#707974",
+                    "secondary-fixed-dim": "#d7c4a6",
+                    "on-surface-variant": "#404944",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#6f6148",
+                    "on-tertiary-fixed-variant": "#6e3900",
+                    "surface-dim": "#d9dadb",
+                    "tertiary-fixed-dim": "#ffb77d",
+                    "primary-container": "#064e3b",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191c1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "gutter-desktop": "32px",
+                    "component-gap": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "stats-number": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #064E3B; /* Deep Forest base for the dark field companion vibe */
+            color: #F9FAFB;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .radar-pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+        .glass-panel {
+            background: rgba(26, 28, 30, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-ink-black">
+<!-- Top App Bar -->
+<header class="bg-deep-forest docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16">
+<button class="text-deep-forest dark:text-primary-fixed-dim hover:bg-aravali-sand/10 dark:hover:bg-deep-forest/20 p-2 rounded-full transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-off-white uppercase tracking-widest">Jhalana Wilds</h1>
+<button class="text-deep-forest dark:text-primary-fixed-dim hover:bg-aravali-sand/10 dark:hover:bg-deep-forest/20 p-2 rounded-full transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<main class="flex-grow pt-4 pb-24 px-margin-mobile">
+<!-- Greeting Section -->
+<section class="mb-6">
+<h2 class="font-headline-md text-headline-md text-sunset-amber">Sunrise Safari</h2>
+<div class="flex items-center mt-2 space-x-2">
+<div class="w-2 h-2 rounded-full bg-sunset-amber radar-pulse"></div>
+<p class="font-label-bold text-label-bold text-on-surface-variant dark:text-outline-variant">Safari In-Progress: Zone 1</p>
+</div>
+</section>
+<!-- Hero: Live Leopard Radar -->
+<section class="relative h-[400px] w-full rounded-xl overflow-hidden shadow-2xl mb-8 border border-white/10">
+<div class="absolute inset-0 bg-cover bg-center" data-location="Jhalana Leopard Safari Park, Rajasthan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYwKEIDS8WJ6RnGavIfolnrVQKveESFQ8fFoTqC6OaF6CbDHr0UOg9JR5yFjze9iqBqPUvJJlkDGrYrKMtj6Mm3hsx5YjahKIXqvhR0SFg--o-9kcws3UIA2h2WAAZTXPY_CbjoyFwZgU3km3o9WfoVBAuQ7p0NdhVTworr197eZR0NWAyQb1MaOUOmtcDfcZ-3G5pxj7mWHomDzhESUbljEw7-kTlP1MxnFXeLNxXKeBQWaN8bbLZN5ra7ug8Y3oIs9wloHL2SAw')"></div>
+<!-- Radar Overlay Elements -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<!-- User Location Marker -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-4 h-4 bg-primary-fixed rounded-full border-2 border-white shadow-lg"></div>
+<span class="mt-1 font-label-bold text-[10px] text-white bg-black/50 px-2 py-0.5 rounded">YOU</span>
+</div>
+<!-- Leopard Sighting Marker -->
+<div class="absolute top-[40%] left-[60%] flex flex-col items-center animate-bounce">
+<div class="bg-sunset-amber p-2 rounded-full shadow-lg border border-leopard-gold">
+<span class="material-symbols-outlined text-white" data-icon="pets" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="mt-1 glass-panel px-3 py-1 rounded-full border border-sunset-amber/30">
+<p class="font-label-bold text-[12px] text-white">Flora (200m)</p>
+</div>
+</div>
+<!-- Live Label -->
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center space-x-2 border border-sunset-amber/50">
+<span class="w-2 h-2 rounded-full bg-sunset-amber animate-pulse"></span>
+<span class="font-label-bold text-label-bold text-white">LIVE RADAR</span>
+</div>
+</section>
+<!-- Quick Actions: Bento Layout -->
+<section class="grid grid-cols-2 gap-4 mb-8">
+<button class="col-span-2 flex items-center justify-between bg-primary-container p-6 rounded-xl border border-white/5 shadow-lg active:scale-95 transition-all group">
+<div class="flex items-center space-x-4">
+<div class="bg-leopard-gold p-3 rounded-lg group-hover:rotate-6 transition-transform">
+<span class="material-symbols-outlined text-deep-forest text-3xl" data-icon="photo_camera">photo_camera</span>
+</div>
+<div class="text-left">
+<p class="font-headline-sm text-headline-sm text-leopard-gold">Identify Species</p>
+<p class="font-body-md text-on-primary-container text-sm">AI Forest Vision</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-primary-container" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="flex flex-col items-start bg-on-background p-5 rounded-xl border border-outline-variant/20 active:scale-95 transition-all">
+<div class="bg-aravali-sand/10 p-3 rounded-lg mb-3">
+<span class="material-symbols-outlined text-aravali-sand" data-icon="menu_book">menu_book</span>
+</div>
+<p class="font-label-bold text-label-bold text-white">Field Guide</p>
+<p class="font-body-md text-xs text-outline-variant mt-1">Species Index</p>
+</button>
+<button class="flex flex-col items-start bg-error-container p-5 rounded-xl border border-error/20 active:scale-95 transition-all">
+<div class="bg-error/10 p-3 rounded-lg mb-3">
+<span class="material-symbols-outlined text-error" data-icon="emergency" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+<p class="font-label-bold text-label-bold text-on-error-container">SOS Support</p>
+<p class="font-body-md text-xs text-on-error-container/70 mt-1">Instant Assist</p>
+</button>
+</section>
+<!-- Recent Sighting Card -->
+<section class="mb-8">
+<h3 class="font-label-bold text-label-bold text-outline-variant uppercase mb-4 tracking-tighter">Recent Sighting Alert</h3>
+<div class="bg-on-background/50 backdrop-blur border border-outline-variant/10 rounded-xl p-4 flex items-center space-x-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-resolution portrait of a majestic Indian leopard known as Flora, camouflaged against the earthy tones of the Jhalana scrub forest during the golden hour. The lighting is warm and dramatic, highlighting the leopard's detailed rosettes and intense amber eyes. The image maintains a luxurious, professional wildlife photography aesthetic with a shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApcrciWkdvO4NLPW978RW95dkfPhNNOkDFypWJsyz_714nIpgN9FO4X1OiLK9T6wDdNKG17VVWy4p356HNGMOV28-imml2kz7zkwCw-lfFvyfWI7szv9U09OBXMMDy4ORHOWSWgcnOJ_d8mMoK8NbvvYLSgC4cbncp0x2BjqqaTx2E455DDYvUBs-y4YeY0wQwNhhGBuSV4Rv_2v-TujtL7osxs0vt7jsYWV0TqCrlQeU7wPfuuwmQqk13az-V5OmOLFsSYEcZiRY">
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<p class="font-headline-sm text-headline-sm text-white text-[18px]">Flora spotted</p>
+<span class="text-[12px] font-label-bold text-sunset-amber">2 MIN AGO</span>
+</div>
+<p class="font-body-md text-outline-variant text-sm">200m ahead near the Dry Nala. Slow down and maintain silence.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-deep-forest border-t border-white/10 rounded-t-xl">
+<!-- Explore -->
+<a class="flex flex-col items-center justify-center bg-aravali-sand text-deep-forest rounded-full px-4 py-1 scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label-bold text-[10px] uppercase">Explore</span>
+</a>
+<!-- Live Tracker -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-sunset-amber transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="location_searching">location_searching</span>
+<span class="font-label-bold text-[10px] uppercase">Live Tracker</span>
+</a>
+<!-- My Bookings -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-sunset-amber transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-label-bold text-[10px] uppercase">Bookings</span>
+</a>
+<!-- Support -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:text-sunset-amber transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="font-label-bold text-[10px] uppercase">Support</span>
+</a>
+</nav>
+<script>
+        // Simple haptic-like feedback for buttons
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('touchstart', () => {
+                if (window.navigator.vibrate) window.navigator.vibrate(10);
+            });
+        });
+
+        // Dynamic greeting based on time of day
+        const updateGreeting = () => {
+            const hour = new Date().getHours();
+            const greetingEl = document.querySelector('h2');
+            let greet = "Welcome to the Wild";
+            if (hour < 12) greet = "Sunrise Safari";
+            else if (hour < 18) greet = "Afternoon Expedition";
+            else greet = "Evening Patrol";
+            greetingEl.textContent = greet;
+        };
+        updateGreeting();
+    </script>
+
+
+</body></html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Legal &amp; Compliance | Jhalana Wilds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ff9939",
+                        "primary-fixed-dim": "#95d3ba",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#bfc9c3",
+                        "tertiary-fixed": "#ffdcc3",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#f3e0c1",
+                        "tertiary-container": "#6a3700",
+                        "leopard-gold": "#FFE9BF",
+                        "deep-forest": "#064E3B",
+                        "aravali-sand": "#E7D4B5",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "tertiary": "#4a2400",
+                        "ink-black": "#1A1C1E",
+                        "surface-bright": "#f8f9fa",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#95d3ba",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#6a5d44",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#d7c4a6",
+                        "surface-container-low": "#f3f4f5",
+                        "on-surface-variant": "#404944",
+                        "primary": "#003527",
+                        "off-white": "#F9FAFB",
+                        "on-primary-container": "#80bea6",
+                        "primary-container": "#064e3b",
+                        "on-primary-fixed-variant": "#0b513d",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed": "#2f1500",
+                        "surface": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "surface-variant": "#e1e3e4",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-primary-fixed": "#002117",
+                        "surface-dim": "#d9dadb",
+                        "on-background": "#191c1d",
+                        "surface-tint": "#2b6954",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "on-secondary-container": "#6f6148",
+                        "on-secondary-fixed": "#241a07",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#f1ddbe",
+                        "outline": "#707974",
+                        "surface-container": "#edeeef",
+                        "sunset-amber": "#D97706",
+                        "on-secondary-fixed-variant": "#52452e",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary-fixed": "#b0f0d6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter-desktop": "32px",
+                        "component-gap": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "stats-number": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "label-bold": ["Inter"],
+                        "headline-sm": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "stats-number": ["24px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .legal-content-card {
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(6, 78, 59, 0.05);
+            border-radius: 4px;
+        }
+
+        .active-tab {
+            color: #064E3B;
+            border-bottom: 2px solid #064E3B;
+        }
+    </style>
+</head>
+<body class="bg-off-white text-on-surface font-body-md antialiased">
+<!-- Top Navigation Bar (Shared Component) -->
+<header class="w-full top-0 sticky z-50 bg-surface/90 backdrop-blur-md shadow-[0_10px_30px_rgba(6,78,59,0.05)]">
+<nav class="hidden md:flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                Jhalana Wilds
+            </div>
+<div class="flex space-x-gutter-desktop items-center">
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Leopards</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Zones</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Packages</a>
+<a class="font-label-bold text-label-bold text-on-surface-variant hover:text-primary transition-colors" href="#">Ethical Safari</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-bold text-label-bold hover:scale-95 transition-transform">
+                    Check Availability
+                </button>
+</div>
+</nav>
+<!-- Mobile Header -->
+<div class="md:hidden flex justify-between items-center px-margin-mobile py-4 bg-surface">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Jhalana Wilds</div>
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap">
+<!-- Hero Section -->
+<div class="mb-section-gap text-center max-w-3xl mx-auto">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-deep-forest mb-6">Legal &amp; Compliance</h1>
+<p class="text-on-surface-variant font-body-lg text-body-lg">
+                Our commitment to transparency, ethical conservation, and the security of your wilderness journey. We operate under the highest standards of international wildlife tourism.
+            </p>
+</div>
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Sidebar Navigation (Desktop) / Mobile Tabs -->
+<aside class="md:w-1/4 shrink-0">
+<div class="sticky top-24 flex flex-col space-y-4">
+<h3 class="font-label-bold text-label-bold uppercase tracking-widest text-outline mb-4">Governance</h3>
+<nav class="flex flex-col space-y-2">
+<a class="p-4 rounded-lg bg-white shadow-sm border-l-4 border-deep-forest font-label-bold text-deep-forest" href="#terms">Terms &amp; Conditions</a>
+<a class="p-4 rounded-lg hover:bg-aravali-sand/20 transition-all font-label-bold text-on-surface-variant" href="#privacy">Privacy Policy</a>
+<a class="p-4 rounded-lg hover:bg-aravali-sand/20 transition-all font-label-bold text-on-surface-variant" href="#ethics">Ethics &amp; Consent</a>
+<a class="p-4 rounded-lg hover:bg-aravali-sand/20 transition-all font-label-bold text-on-surface-variant" href="#refund">Refund Policy</a>
+</nav>
+<div class="mt-8 p-6 bg-deep-forest text-white rounded-lg">
+<img alt="Ethical Safari Badge" class="w-16 h-16 mb-4 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLuVtlG4dzI-_r7riJKRwBep_edk8512m7qbkiUuEo28YRHVM_u2X03xxaGFidGJ8p3o8gfIP2BhfjXyXtkstec5MpsA31qKEzuTKQsX7Cg1lJ2m93nXSkLfJD3q38hIOShaVQJkAdKeFkGcPmYavNcP7GceNmZKqg12C3q06UN6J4xIYZkpR5i-rpwzLiYqGg0B_OW8gph7DjuhZy3us1k8cOfcSB0A9qy5bEW3UOmpy5UjW28joS6wxp4"/>
+<p class="font-label-bold text-xs uppercase tracking-tighter opacity-80 mb-2">Authenticated Governance</p>
+<p class="text-body-md font-body-md">All policies are audited quarterly by our conservation board.</p>
+</div>
+</div>
+</aside>
+<!-- Legal Content Canvas -->
+<div class="flex-1 space-y-section-gap">
+<!-- 1. Terms & Conditions -->
+<section class="scroll-mt-24" id="terms">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-deep-forest">1. Terms &amp; Conditions</h2>
+<button class="flex items-center space-x-2 text-primary font-label-bold hover:underline">
+<span class="material-symbols-outlined">download</span>
+<span>Download PDF</span>
+</button>
+</div>
+<div class="legal-content-card p-8 md:p-12 prose prose-emerald max-w-none">
+<div class="h-[500px] overflow-y-auto pr-6 hide-scrollbar">
+<p class="font-bold text-deep-forest mb-4">Last Updated: October 24, 2024</p>
+<h4 class="font-headline-sm text-headline-sm text-deep-forest mt-8 mb-4">1.1 Scope of Service</h4>
+<p class="text-body-md mb-4 text-on-surface-variant">Jhalana Wilds provides high-end expedition and safari services within the Jhalana Leopard Reserve. By booking a safari, you agree to comply with the Forest Department of Rajasthan regulations and our internal safety protocols.</p>
+<h4 class="font-headline-sm text-headline-sm text-deep-forest mt-8 mb-4">1.2 Booking &amp; Eligibility</h4>
+<p class="text-body-md mb-4 text-on-surface-variant">All participants must be at least 6 years of age. Safaris are booked on a first-come, first-served basis through our secure portal. Jhalana Wilds reserves the right to refuse service to any individual who violates safety protocols during prior visits.</p>
+<h4 class="font-headline-sm text-headline-sm text-deep-forest mt-8 mb-4">1.3 Wilderness Risks</h4>
+<p class="text-body-md mb-4 text-on-surface-variant">Wildlife encounters are unpredictable. While Jhalana Wilds takes every precaution to ensure safety, participants acknowledge the inherent risks of entering a natural habitat. Liability is limited to the extent permitted by Indian Law.</p>
+<h4 class="font-headline-sm text-headline-sm text-deep-forest mt-8 mb-4">1.4 Code of Conduct</h4>
+<p class="text-body-md mb-4 text-on-surface-variant">Noise pollution, littering, and any attempt to feed or provoke animals will result in immediate expulsion from the park without a refund. Our guides have the final authority on all field decisions.</p>
+<div class="mt-8 p-6 bg-surface-container-low border border-outline-variant rounded-lg italic">
+                                "We preserve the wild for those who follow. Your compliance ensures the leopard's legacy remains untainted by human footprint."
+                            </div>
+</div>
+</div>
+</section>
+<!-- 2. Privacy & Data Protection -->
+<section class="scroll-mt-24" id="privacy">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-deep-forest">2. Privacy &amp; Data Protection</h2>
+<button class="flex items-center space-x-2 text-primary font-label-bold hover:underline">
+<span class="material-symbols-outlined">download</span>
+<span>Download PDF</span>
+</button>
+</div>
+<div class="legal-content-card p-8 md:p-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-sunset-amber" style="font-size: 32px;">verified_user</span>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-deep-forest mb-2">GDPR Compliant</h4>
+<p class="text-body-md text-on-surface-variant">Full rights to data access, erasure, and portability for our international guests.</p>
+</div>
+</div>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-sunset-amber" style="font-size: 32px;">shield</span>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-deep-forest mb-2">DPDP Compliant</h4>
+<p class="text-body-md text-on-surface-variant">Strict adherence to India's Digital Personal Data Protection Act of 2023.</p>
+</div>
+</div>
+</div>
+<div class="space-y-6 text-on-surface-variant">
+<p>We collect only the necessary data to facilitate your booking and ensure field safety (e.g., identity proof required by Forest Dept). Your data is never sold. We use AES-256 encryption for all stored records.</p>
+<div class="bg-aravali-sand/10 p-6 rounded-lg border-l-4 border-aravali-sand">
+<h5 class="font-label-bold text-deep-forest mb-2">Biometric &amp; Image Data</h5>
+<p class="text-sm">Photographs taken during the safari may be used for conservation research with your implicit consent. Marketing use requires explicit opt-in.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Citizen Scientist Ethics Pledge -->
+<section class="scroll-mt-24" id="ethics">
+<div class="bg-deep-forest text-off-white p-8 md:p-16 rounded-xl relative overflow-hidden">
+<!-- Decorative Texture Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle, #E7D4B5 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="relative z-10">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-6">
+<div>
+<span class="inline-block px-3 py-1 bg-aravali-sand text-deep-forest font-label-bold text-xs rounded mb-4">MANDATORY PLEDGE</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-aravali-sand">The Citizen Scientist Ethics Pledge</h2>
+</div>
+<img alt="Ethical Safari Seal" class="w-24 h-24 bg-white p-2 rounded-full" src="https://lh3.googleusercontent.com/aida/AP1WRLuVtlG4dzI-_r7riJKRwBep_edk8512m7qbkiUuEo28YRHVM_u2X03xxaGFidGJ8p3o8gfIP2BhfjXyXtkstec5MpsA31qKEzuTKQsX7Cg1lJ2m93nXSkLfJD3q38hIOShaVQJkAdKeFkGcPmYavNcP7GceNmZKqg12C3q06UN6J4xIYZkpR5i-rpwzLiYqGg0B_OW8gph7DjuhZy3us1k8cOfcSB0A9qy5bEW3UOmpy5UjW28joS6wxp4"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-6 border border-off-white/20 rounded-lg">
+<span class="material-symbols-outlined text-sunset-amber mb-4">visibility_off</span>
+<h4 class="font-label-bold mb-2">Visual Silence</h4>
+<p class="text-sm opacity-80">I will not use flash photography or artificial lighting that disturbs nocturnal behaviors.</p>
+</div>
+<div class="p-6 border border-off-white/20 rounded-lg">
+<span class="material-symbols-outlined text-sunset-amber mb-4">location_off</span>
+<h4 class="font-label-bold mb-2">Geo-Privacy</h4>
+<p class="text-sm opacity-80">I will disable GPS metadata on public social posts to prevent illegal poaching tracking.</p>
+</div>
+<div class="p-6 border border-off-white/20 rounded-lg">
+<span class="material-symbols-outlined text-sunset-amber mb-4">psychology</span>
+<h4 class="font-label-bold mb-2">Data Sharing</h4>
+<p class="text-sm opacity-80">I will share clear leopard sighting photos with the Jhalana research team for identification.</p>
+</div>
+</div>
+<div class="mt-12 pt-12 border-t border-off-white/10 flex flex-col items-center">
+<label class="flex items-center space-x-3 cursor-pointer group">
+<input class="w-6 h-6 rounded bg-transparent border-off-white/30 text-sunset-amber focus:ring-sunset-amber" type="checkbox"/>
+<span class="text-body-lg font-body-lg group-hover:text-aravali-sand transition-colors">I accept the ethical responsibilities of a Citizen Scientist.</span>
+</label>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Cancellation & Refund Policy -->
+<section class="scroll-mt-24" id="refund">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-deep-forest">4. Refund Policy</h2>
+<button class="flex items-center space-x-2 text-primary font-label-bold hover:underline">
+<span class="material-symbols-outlined">download</span>
+<span>Download PDF</span>
+</button>
+</div>
+<div class="legal-content-card overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-aravali-sand/20 text-deep-forest">
+<th class="p-6 font-label-bold border-b border-outline-variant">Timeframe Before Safari</th>
+<th class="p-6 font-label-bold border-b border-outline-variant">Refund Percentage</th>
+<th class="p-6 font-label-bold border-b border-outline-variant">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-surface-container">
+<td class="p-6 font-body-md text-on-surface">30+ Days</td>
+<td class="p-6 font-stats-number text-deep-forest">90%</td>
+<td class="p-6 text-on-surface-variant text-sm">10% Processing &amp; Forest Dept non-refundable fees.</td>
+</tr>
+<tr class="border-b border-surface-container bg-surface-container-low">
+<td class="p-6 font-body-md text-on-surface">15 - 29 Days</td>
+<td class="p-6 font-stats-number text-deep-forest">50%</td>
+<td class="p-6 text-on-surface-variant text-sm">Includes administrative overhead.</td>
+</tr>
+<tr class="border-b border-surface-container">
+<td class="p-6 font-body-md text-on-surface">7 - 14 Days</td>
+<td class="p-6 font-stats-number text-deep-forest">25%</td>
+<td class="p-6 text-on-surface-variant text-sm">Minimum refund for late cancellations.</td>
+</tr>
+<tr class="bg-error-container/10">
+<td class="p-6 font-bold text-error">Less than 7 Days</td>
+<td class="p-6 font-stats-number text-error">0%</td>
+<td class="p-6 text-on-surface-variant text-sm font-semibold">Strict no-refund policy for last-minute cancellations.</td>
+</tr>
+</tbody>
+</table>
+<div class="p-8 bg-surface-container-lowest">
+<div class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-sunset-amber">info</span>
+<p class="text-sm text-on-surface-variant">
+<strong>Weather Clause:</strong> In the rare event the Forest Department closes the reserve due to extreme weather or safety concerns, a 100% credit or full refund will be issued.
+                                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Help & Contact CTA -->
+<section class="bg-aravali-sand/10 p-12 rounded-xl border border-aravali-sand/30 text-center">
+<h3 class="font-headline-sm text-headline-sm text-deep-forest mb-4">Need further clarification?</h3>
+<p class="text-on-surface-variant mb-8 max-w-lg mx-auto">Our legal team is available for any specific inquiries regarding our policies and your data rights.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-deep-forest text-off-white px-8 py-3 rounded font-label-bold hover:opacity-90 transition-opacity">Contact Legal Desk</button>
+<button class="bg-white border border-deep-forest text-deep-forest px-8 py-3 rounded font-label-bold hover:bg-deep-forest/5 transition-colors">Privacy Dashboard</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full mt-section-gap bg-deep-forest">
+<div class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-md text-headline-md text-aravali-sand mb-2">Jhalana Wilds</div>
+<p class="text-off-white/80 font-body-md text-body-md max-w-xs">© 2024 Jhalana Wilds. Conservation First Safari.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="font-label-bold text-label-bold text-sunset-amber transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-leopard-gold transition-colors" href="#">Terms of Service</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-leopard-gold transition-colors" href="#">Sustainability Report</a>
+<a class="font-label-bold text-label-bold text-off-white/80 hover:text-leopard-gold transition-colors" href="#">Community Impact</a>
+</div>
+</div>
+</footer>
+<!-- Bottom Nav Bar (Shared Component - Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-surface shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-bold text-[10px] mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">radar</span>
+<span class="font-label-bold text-[10px] mt-1">Live Tracker</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">event_available</span>
+<span class="font-label-bold text-[10px] mt-1">My Bookings</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-label-bold text-[10px] mt-1">Support</span>
+</a>
+</nav>
+<script>
+        // Smooth scroll spy and tab activation logic
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('aside nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('bg-white', 'shadow-sm', 'border-l-4', 'border-deep-forest', 'text-deep-forest');
+                link.classList.add('text-on-surface-variant', 'hover:bg-aravali-sand/20');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('bg-white', 'shadow-sm', 'border-l-4', 'border-deep-forest', 'text-deep-forest');
+                    link.classList.remove('text-on-surface-variant', 'hover:bg-aravali-sand/20');
+                }
+            });
+        });
+    </script>
+</body></html>
