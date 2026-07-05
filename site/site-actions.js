@@ -7,6 +7,7 @@
     ["check on whatsapp", whatsappUrl],
     ["whatsapp us", whatsappUrl],
     ["whatsapp", whatsappUrl],
+    ["wa", whatsappUrl],
     ["whatsapp team", whatsappUrl],
     ["call now", phoneUrl],
     ["call for booking assistance", phoneUrl],
