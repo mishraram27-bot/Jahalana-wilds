@@ -430,20 +430,20 @@ button:has(.material-symbols-outlined):not([type="submit"]) {
   body > header .font-headline-md {
     min-width: 0;
     flex: 1 1 auto;
-    font-size: clamp(1.5rem, 7.4vw, 1.9rem) !important;
+    font-size: clamp(1.22rem, 5.8vw, 1.52rem) !important;
     line-height: 1 !important;
   }
 
   body > nav:not(.fixed) a[href*="wa.me"],
   body > header a[href*="wa.me"] {
     flex: 0 1 auto;
-    max-width: 82px;
+    max-width: 56px;
     min-height: 40px;
     height: auto;
     padding-top: 8px !important;
     padding-bottom: 8px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
     font-size: 0.66rem !important;
     line-height: 1.15 !important;
     text-align: center;
