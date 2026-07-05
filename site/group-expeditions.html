@@ -136,7 +136,7 @@
 </div>
 <!-- CTA -->
 <button class="bg-deep-forest text-off-white px-6 py-2 rounded-lg font-label-bold text-label-bold transition-transform active:scale-95">
-                Check on WhatsApp
+                WhatsApp
             </button>
 </div>
 </nav>
@@ -164,7 +164,7 @@ Safari bookings are manually coordinated after enquiry. Final availability, perm
 Safari sightings are natural and cannot be guaranteed. Booking assistance is subject to availability, permit rules, vehicle allocation, and final confirmation over phone or WhatsApp.
 </p>
 <!-- Form -->
-<form class="space-y-6" name="group-mobile-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html"><input type="hidden" name="form-name" value="group-mobile-inquiry"/><p class="hidden"><label>Do not fill this out if you are human: <input name="bot-field"/></label></p>
+<form class="space-y-6" name="group-mobile-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html"><input type="hidden" name="form-name" value="group-mobile-inquiry"/><p class="hidden"><label>Do not fill this out if you are human: <input name="bot-field"/></label></p>
 <div class="space-y-1">
 <label class="font-label-bold text-label-bold text-deep-forest">Organization Name</label>
 <input class="w-full px-4 py-3 bg-white border border-deep-forest/20 rounded-xl focus:ring-2 focus:ring-aravali-sand focus:border-deep-forest outline-none transition-all" name="organization" placeholder="e.g. National Geographic Society" type="text"/>
@@ -292,7 +292,7 @@ Safari sightings are natural and cannot be guaranteed. Booking assistance is sub
 <footer class="w-full py-20 px-margin-mobile flex flex-col items-start gap-12 bg-deep-forest dark:bg-ink-black text-off-white mb-20 md:mb-0 md:px-margin-desktop md:flex-row md:justify-between">
 <div class="space-y-4">
 <div class="font-headline-sm text-headline-sm text-leopard-gold">Jhalana Wilds</div>
-<p class="max-w-xs text-primary-fixed-dim font-body-md">Preserving the untamed beauty of Jhalana while providing world-class leopard tracking expeditions.</p>
+<p class="max-w-xs text-primary-fixed-dim font-body-md">Preserving the untamed beauty of Jhalana while providing carefully guided leopard safari expeditions.</p>
 </div>
 <div class="grid grid-cols-2 gap-8 w-full md:w-auto">
 <div class="space-y-4">
@@ -328,23 +328,6 @@ Safari sightings are natural and cannot be guaranteed. Booking assistance is sub
             });
         });
 
-        // Simple submission mock
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Transmitting Inquiry...';
-            btn.style.backgroundColor = '#D97706';
-            setTimeout(() => {
-                btn.innerText = 'Inquiry Sent Successfully';
-                btn.style.backgroundColor = '#2b6954';
-                e.target.reset();
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.backgroundColor = '#064E3B';
-                }, 3000);
-            }, 1500);
-        });
     </script>
 <script src="site-actions.js"></script>
 </body></html>

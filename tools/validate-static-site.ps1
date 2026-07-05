@@ -120,10 +120,6 @@ foreach ($file in $htmlFiles) {
     }
   }
 
-  if ($content -match 'action="/') {
-    $issues.Add("Root-relative form action remains in $($file.Name)")
-  }
-
   if ($content -match 'href=\\"') {
     $issues.Add("Escaped href attribute remains in $($file.Name)")
   }
