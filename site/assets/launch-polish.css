@@ -436,19 +436,7 @@ button:has(.material-symbols-outlined):not([type="submit"]) {
 
   body > nav:not(.fixed) a[href*="wa.me"],
   body > header a[href*="wa.me"] {
-    flex: 0 1 auto;
-    max-width: 56px;
-    min-height: 40px;
-    height: auto;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-    font-size: 0.66rem !important;
-    line-height: 1.15 !important;
-    text-align: center;
-    white-space: normal;
-    overflow-wrap: anywhere;
+    display: none !important;
   }
 
   h1,
